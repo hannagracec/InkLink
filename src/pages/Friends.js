@@ -1,4 +1,4 @@
-function Friends() {
+export default function Friends() {
     return(
         <div></div>
     )
