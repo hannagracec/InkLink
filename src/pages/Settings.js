@@ -43,20 +43,25 @@ export default function Settings() {
     return (
         <div>
             <body>
-            <h1>Settings</h1>
+            <h1 className="header">Settings</h1>
             <div>
-                <button type="button" class ="collapsible">Change Profile Picture</button>
-                <div class ="content"><p>would need access to users photos or have default photos they can choose from</p>
+                <button type="button" class ="collapsible"><img src="default_profile_pic.jpg"></img>Change Profile Picture</button>
+                <div className ="content">
+                    <p>would need access to users photos or have default photos they can choose from</p>
                 </div>
 
                 <button type="button" class ="collapsible">Change Username</button>
-                <div class="content">
+                <div className="content">
                     <form action="#">
                         <label for="Name">New Name: </label>
                         <input type="Name" id ="Name" name="Name"></input>
                     </form>
                 </div>
+                <button type="button" class ="collapsible"><img src="default_profile_pic.jpg"></img>Change Walking Goal</button>
+                <div className ="content">
+                    <p>Current goal: 10 km</p>
                 </div>
+            </div>
             </body>
         </div>
     )
