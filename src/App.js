@@ -1,14 +1,17 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './pages/Login';
+import FirstPage from './pages/FirstPage';
+
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route/>
-      </Switch>
-    </Router>
+    <div>
+      <Login/>
+      <FirstPage/>
+    </div>
+
+  
   );
 }
 
