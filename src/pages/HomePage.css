@@ -6,13 +6,13 @@ body {
 
 .profile {
     width: 50px;
-    margin: 20px;
+    margin: 5px 10px;
     border-radius: 50px;
 }
 
 .hello-user {
     line-height: 0.8;
-    margin-left: 20px;
+    margin-left: 10px;
     animation: slideIn 1.5s ease forwards;
     font-family: "Roboto Mono", monospace;
 }
@@ -182,7 +182,7 @@ body {
     width: 350px;
     border-radius: 15px;
     box-shadow: 5px 10px 15px #d4cccc;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     padding: 10px;
 }
 
