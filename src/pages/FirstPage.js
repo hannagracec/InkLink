@@ -2,7 +2,7 @@ import React from 'react';
 import './FirstPage.css';
 import { Link } from 'react-router-dom';
 import logo from './images/logo.png'; // Import the logo image
-
+import bench from './images/bench.svg';
 
 export default function FirstPage() {
     // Function to handle logo click
@@ -18,8 +18,12 @@ export default function FirstPage() {
             <div className="background-shapes"></div>
             <div className="content">
                 <h1 className="slide-in"><strong>Welcome to App</strong></h1>
+                <div>
+                    {/* Adjust the size of the bench image using inline styles */}
+                    <img src={bench} alt="Bench" style={{ width: '50px', height: 'auto' }} />
+                </div>
                 <div className="slideshow">
-                    <img src={logo} alt="App 1" />
+                    <img src={bench} alt="App 1" />
                     <img src={logo} alt="App 2" />
                     <img src={logo} alt="App 3" />
                 </div>
