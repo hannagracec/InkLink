@@ -24,8 +24,18 @@ export default function Settings() {
                 }
             });
         });
-    });
 
+        const rangeSlider = document.getElementById("rs-range-line");
+        const rangeBullet = document.getElementById("rs-bullet");
+        
+        rangeSlider.addEventListener("input", showSliderValue, false);
+        
+        function showSliderValue() {
+            rangeBullet.innerHTML = rangeSlider.value;
+            const bulletPosition = (rangeSlider.value / rangeSlider.max);
+            rangeBullet.style.left = (bulletPosition * rangeSlider.offsetWidth) + "px";
+        }
+    }, []); // Empty dependency array ensures this effect runs only once, similar to componentDidMount
 
     document.addEventListener('DOMContentLoaded', function() {
         const button = document.getElementById('toggleButton');
@@ -35,64 +45,6 @@ export default function Settings() {
         });
       });
       
-
-
-
-    // const profileIconBtns = document.querySelectorAll('.profile-icon-btn');
-
-    // // Add click event listener to each profile icon button
-    // profileIconBtns.forEach(btn => {
-    //     btn.addEventListener('click', function() {
-    //         // Toggle the 'active' class on the clicked button
-    //         this.classList.toggle('active');
-
-    //         // Save the active state to local storage
-    //         const isActive = this.classList.contains('active');
-    //         const key = `profileBtnActive_${this.id}`;
-    //         localStorage.setItem(key, isActive);
-    //     });
-
-    //     // Check if the button was previously clicked and apply the 'active' class
-    //     const key = `profileBtnActive_${btn.id}`;
-    //     const isActive = localStorage.getItem(key) === 'true';
-    //     if (isActive) {
-    //         btn.classList.add('active');
-    //     }
-    // });
-    //     // function showSliderValue() {
-        //     rangeBullet.innerHTML = rangeSlider.value;
-        //     var bulletPosition = (rangeSlider.value / rangeSlider.max);
-        //     rangeBullet.style.left = (bulletPosition * rangeSlider.offsetWidth) + "px";
-
-        function showSliderValue() {
-            const rangeSlider = document.getElementById("rs-range-line");
-            const rangeBullet = document.getElementById("rs-bullet");
-    
-            if (rangeSlider && rangeBullet) {
-                rangeBullet.innerHTML = rangeSlider.value;
-                const bulletPosition = rangeSlider.value / rangeSlider.max;
-                rangeBullet.style.left = `${bulletPosition * rangeSlider.offsetWidth}px`;
-            }
-        }
-
-
-    //     const rangeSlider = document.getElementById("rs-range-line");
-    //     const rangeBullet = document.getElementById("rs-bullet");
-
-    //     if (rangeSlider && rangeBullet) {
-    //         rangeSlider.addEventListener("input", showSliderValue, false);
-    //     }
-
-    //     return () => {
-    //         if (rangeSlider && rangeBullet) {
-    //             rangeSlider.removeEventListener("input", showSliderValue);
-    //         }
-    //     };
-    // }, []);
-
-
-
-
     return (
         <div>
             <div className="topSetting">
@@ -156,4 +108,4 @@ export default function Settings() {
             </div>
         </div>
     );
-    }
+}
