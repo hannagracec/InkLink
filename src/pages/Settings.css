@@ -1,3 +1,115 @@
+.topSetting {
+    padding-top: 10px;
+}
+
+.headerSetting {
+    margin-top: 35px;
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: #222222;
+}
+
+.collapsible {
+    background-color: #EDEEF0; /* Set default background color to grey */
+    color: #FF5236;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-family: 'Roboto Mono', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add drop shadow */
+}
+
+.collapsible.active,
+.collapsible:hover {
+    background-color: #FF5236; /* Override background color for active or hovered state */
+    color: #EDEEF0;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Add drop shadow */
+}
+
+.contentSetting {
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    margin-bottom: 10px;
+}
+
+.profile-options {
+    width: 100%;
+    background-color: #F8F8F8;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: none;
+    outline: none; 
+}
+
+.profile-icon-btn
+{
+ border: none;
+ width: 95px;
+ background-color: #F8F8F8;
+}
+
+
+.profile-options img{
+    width: 100%; /* Ensure the image fills the circular container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the entire image is visible within the circular container */
+    border-radius: 50%; /* Make sure the image itself is also circular */
+    
+    
+}
+
+.profile-icon-btn:hover .image
+{
+    opacity: 0.3; /* Darken the person div slightly when pressed */
+}
+
+.profile-icon-btn:hover .middle
+{
+    opacity: 0.3; /* Darken the person div slightly when pressed */
+}
+
+.text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+.name-label-input .choose-username-label {
+    font-family: 'Roboto', sans-serif; /*this doesnt actually work*/
+    color: #222222; 
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.text-line {
+    background-color: transparent;
+    color: #222222;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #FFBD44 2px;
+    padding: 3px 10px;
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -5,9 +117,6 @@
     justify-content: center;
 }
 
-.highlight {
-    border: 2px solid blue;
-}
 
 .box-minmax {
     margin-top: 30px;
@@ -119,90 +228,20 @@
     color: #FFBD44;
 }
 
-.topSetting {
-    padding-top: 10px;
-}
-
-.headerSetting {
-    margin-top: 35px;
-    margin-left: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    color: #222222;
-}
-
-.collapsible {
-    background-color: #EDEEF0; /* Set default background color to grey */
-    color: #FF5236;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
+#toggleButton {
+    padding: 10px 20px;
     border: none;
-    text-align: left;
-    outline: none;
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-family: 'Roboto Mono', sans-serif;
-    border-radius: 10px;
+    background-color: #FFBD44;
+    cursor: pointer;
+    font-size: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add drop shadow */
-}
-
-.collapsible.active,
-.collapsible:hover {
-    background-color: #FF5236; /* Override background color for active or hovered state */
-    color: #EDEEF0;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Add drop shadow */
-}
-
-.contentSetting {
-    padding: 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #F8F8F8;
-    margin-bottom: 10px;
-}
-
-.profile-options {
-    background-color: #F8F8F8;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border: none; /* Remove border still doesnt work????????/*/
-    outline: none; /* Remove outline */
-    /* width: 50px;
-    height: 50px;
-    border-radius: 50%; /* Make the image circular 
-    overflow: hidden; /* Ensure content doesn't overflow the circular shape 
-    padding:15px; */
-}
-.profile-icon-btn
-{
- border: none;
- width: 95px;
- background-color: #F8F8F8;
-}
-
-.profile-options img{
-    width: 100%; /* Ensure the image fills the circular container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the entire image is visible within the circular container */
-    border-radius: 50%; /* Make sure the image itself is also circular */
-}
-.content_paragraph {
-    font-family: 'Roboto', sans-serif;
-    color: #222222;
-    text-align: center;
-}
-
-.text-line {
-    background-color: transparent;
-    color: #222222;
-    outline: none;
-    outline-style: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid #FFBD44 2px;
-    padding: 3px 10px;
-}
+    border-radius: 10px;
+    font-family: 'Roberto', sans-serif;
+  }
+  
+  #toggleButton.checked:after { /*does actually go through this?????*/
+    content: "\2713"; 
+    margin-right: 5px;
+    color: green;
+  }
+  
