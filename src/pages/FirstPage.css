@@ -22,7 +22,7 @@
 }
 
 /* Content container */
-.content {
+.content-1 {
     z-index: 1; /* Ensure content is above background shapes */
     text-align: center;
     padding: 20px;

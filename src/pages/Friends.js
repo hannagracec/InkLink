@@ -36,7 +36,7 @@ function Friends() {
     return (
         <div>
             {/* Header */}
-            <div className="header">
+            <div className="header-friends">
                 <h1 className="title">Your Friends!</h1>
                 <Link to="/findFriends" className="find-friend-btn">Find Friends</Link>
             </div>

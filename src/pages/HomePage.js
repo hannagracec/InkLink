@@ -10,9 +10,9 @@ import { Link } from 'react-router-dom';
 
 export default function HomePage() {
   return (
-    <body>
-      <div className="header">
-        <img className="profile" src={Profile} alt="user profile"/>
+    <div className="body-home">
+      <div className="header-home">
+        <img className="profile-home" src={Profile} alt="user profile"/>
       </div>
       <div>
         <div className="hello-user">
@@ -20,7 +20,7 @@ export default function HomePage() {
           <h1 className="user-name">Shenice</h1>
         </div>
       </div>
-      <div className="content">
+      <div className="content-home">
         <div className="weather">
           <div className="weather-icon">
             <h3>Current Weather</h3>
@@ -85,7 +85,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-    </body>
+    </div>
   );
 }
   

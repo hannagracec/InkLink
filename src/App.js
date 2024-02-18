@@ -10,17 +10,19 @@ import FindFriends from './pages/FindFriends'
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<FirstPage />} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/Home" element={<HomePage/>} />
-        <Route path="/map" element={<MapPage />} />
-        <Route path="/friends" element={<FriendsPage />} />
-        <Route path="/books" element={<BooksPage />} />
-        <Route path="/findFriends" element={<FindFriends/>} />
-      </Routes>
-    </Router>
+    <div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<FirstPage />} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/Home" element={<HomePage/>} />
+          <Route path="/map" element={<MapPage />} />
+          <Route path="/friends" element={<FriendsPage />} />
+          <Route path="/books" element={<BooksPage />} />
+          <Route path="/findFriends" element={<FindFriends/>} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

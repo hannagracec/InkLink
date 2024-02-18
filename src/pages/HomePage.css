@@ -1,19 +1,30 @@
-body {
+.body-home {
     font-family: "Roboto", sans-serif;
-    background-color: #ebebeb;
     color: rgb(34, 34, 34);
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
 }
 
-.profile {
+.content-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-home {
     width: 50px;
-    margin: 5px 10px;
+    margin: 30px 30px;
+    margin-bottom: 10px;
     border-radius: 50px;
 }
 
 .hello-user {
     line-height: 0.8;
-    margin-left: 10px;
-    animation: slideIn 1.5s ease forwards;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    animation: slideInVertical 1.5s ease forwards; 
+    opacity: 0;
     font-family: "Roboto Mono", monospace;
 }
 
@@ -87,17 +98,6 @@ body {
 
 .w-text {
     margin-left: 10px;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-50px); 
-        opacity: 0; 
-    }
-    to {
-        transform: translateY(0); 
-        opacity: 1; 
-    }
 }
 
 .book-friend {
@@ -214,4 +214,15 @@ body {
 .link {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit color from parent */
+}
+
+@keyframes slideInVertical {
+    from {
+        transform: translateY(-50px); /* Start the animation off-screen */
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        transform: translateY(0); /* Move element to its original position */
+        opacity: 1; /* Set opacity to 1 */
+    }
 }
