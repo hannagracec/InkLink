@@ -43,7 +43,8 @@
     background-color: #F8F8F8;
     margin-bottom: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add drop shadow */
-
+    width: 90%;
+    margin-left: 10px;
 }
 
 .profile-options {
@@ -235,6 +236,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add drop shadow */
     border-radius: 10px;
     font-family: 'Roberto', sans-serif;
+    margin-top: 10px;
   }
   
   #toggleButton.checked:after { /*does actually go through this?????*/
