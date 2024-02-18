@@ -190,3 +190,13 @@ body {
 .books-subtitle {
     margin-left: 10px;
 }
+
+/* fix to added book size */
+.book-list img,
+.book img,
+.book-catalog .book img {
+    height: 150px; /* Set the height of the images */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between books */
+}
+
