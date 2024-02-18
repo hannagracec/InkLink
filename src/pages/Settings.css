@@ -1,3 +1,124 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight {
+    border: 2px solid blue;
+}
+
+.box-minmax {
+    margin-top: 30px;
+    width: 300px; /* Adjusted width */
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.box-minmax span:first-child {
+    margin-left: 10px;
+}
+
+.range-slider {
+    margin-top: 29px; /* Adjusted margin */
+}
+
+.rs-range {
+    width: 300px; /* Adjusted width */
+    -webkit-appearance: none;
+}
+
+.rs-range:focus {
+    outline: none;
+}
+
+.rs-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #ffffff;
+    border-radius: 0px;
+    border: 0px solid #010101;
+}
+
+.rs-range::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    box-shadow: none;
+    background: #ffffff;
+    border-radius: 0px;
+    border: 0px solid #010101;
+}
+
+.rs-range::-webkit-slider-thumb {
+    box-shadow: none;
+    border: 0px solid #FFBD44;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 30px;
+    width: 18px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -20px;
+}
+
+.rs-range::-moz-range-thumb {
+    box-shadow: none;
+    border: 0px solid #FFBD44;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    height: 42px;
+    width: 22px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -20px;
+}
+
+.rs-range::-moz-focus-outer {
+    border: 0;
+}
+
+.rs-label {
+    position: relative;
+    transform-origin: center center;
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: transparent;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 22px;
+    box-sizing: border-box;
+    border: transparent;
+    margin-top: 20px;
+    margin-left: -38px;
+    left: attr(value);
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    color: #FFBD44;
+    font-size: 20px;
+}
+
+.rs-label::after {
+    content: "km";
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    margin-top: -33px;
+    color: #FFBD44;
+}
+
 .topSetting {
     padding-top: 10px;
 }
@@ -5,12 +126,12 @@
 .headerSetting {
     margin-top: 35px;
     margin-left: 20px;
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 30px;
     color: #222222;
 }
 
-.collapsible{
+.collapsible {
     background-color: #EDEEF0; /* Set default background color to grey */
     color: #FF5236;
     cursor: pointer;
@@ -26,9 +147,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add drop shadow */
 }
 
-.active, .collapsible:hover {
+.collapsible.active,
+.collapsible:hover {
     background-color: #FF5236; /* Override background color for active or hovered state */
-    color:#EDEEF0;
+    color: #EDEEF0;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Add drop shadow */
 }
 
@@ -40,21 +162,35 @@
     margin-bottom: 10px;
 }
 
-.profile-options{
+.profile-options {
+    background-color: #F8F8F8;
+    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     border: none; /* Remove border still doesnt work????????/*/
     outline: none; /* Remove outline */
+    /* width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make the image circular 
+    overflow: hidden; /* Ensure content doesn't overflow the circular shape 
+    padding:15px; */
 }
-
-.profile-icon-btn:active
+.profile-icon-btn
 {
-
+ border: none;
+ width: 95px;
+ background-color: #F8F8F8;
 }
 
-.content_paragraph{
-    font-family: 'Roboto Mono', sans-serif;
+.profile-options img{
+    width: 100%; /* Ensure the image fills the circular container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the entire image is visible within the circular container */
+    border-radius: 50%; /* Make sure the image itself is also circular */
+}
+.content_paragraph {
+    font-family: 'Roboto', sans-serif;
     color: #222222;
     text-align: center;
 }
@@ -70,62 +206,3 @@
     border-bottom: solid #FFBD44 2px;
     padding: 3px 10px;
 }
-
-.slider-container {
-    position: relative;
-    width: 310px;
-    margin:auto;
-}
-
-.slider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 300px;
-    height: 10px;
-    border-radius: 5px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #FFBD44;
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #FFBD44;
-    cursor: pointer;
-}
-
-.slider-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.slider-labels span {
-    font-size: 12px;
-    color: #FF5236;
-    font-family: 'Roboto Mono', sans-serif;
-}
-
-.slider-value {
-    position: absolute;
-    top: -20px; /* Adjust this value as needed */
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 12px;
-    color: #FF5236;
-    font-family: 'Roboto', sans-serif;

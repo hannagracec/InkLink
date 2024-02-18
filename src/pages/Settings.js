@@ -4,15 +4,11 @@ import Man3 from "../pages/FriendsPP/Man3.png";
 import Woman1 from "../pages/FriendsPP/Woman1.png";
 import Woman2 from "../pages/FriendsPP/Woman2.png";
 import Woman3 from "../pages/FriendsPP/Woman3.png";
-import Woman4 from "../pages/FriendsPP/Woman4.png";
 import settingsicon from '../pages/SettingsImages/settingsicon.png';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './Settings.css';
 
 export default function Settings() {
-
-    const [setSliderValue] = useState(0);
-
     useEffect(() => {
         const coll = document.getElementsByClassName("collapsible");
         const collArray = Array.from(coll);
@@ -28,30 +24,48 @@ export default function Settings() {
                 }
             });
         });
-
-        return () => {
-            collArray.forEach(element => {
-                element.removeEventListener("click");
-            });
-        };
-    }, []);
+    });
 
 
-    const handleSliderChange = (event) => {
-        setSliderValue(parseInt(event.target.value));
+        var rangeSlider = document.getElementById("rs-range-line");
+        var rangeBullet = document.getElementById("rs-bullet");
+
+        rangeSlider = document.getElementById("rs-range-line");
+            if (rangeSlider) {
+                rangeSlider.addEventListener("input", showSliderValue, false);
+            }
+
+        function showSliderValue() {
+            rangeBullet.innerHTML = rangeSlider.value;
+            var bulletPosition = (rangeSlider.value / rangeSlider.max);
+            rangeBullet.style.left = (bulletPosition * rangeSlider.offsetWidth) + "px";
+}
+
+    //     const rangeSlider = document.getElementById("rs-range-line");
+    //     const rangeBullet = document.getElementById("rs-bullet");
+
+    //     if (rangeSlider && rangeBullet) {
+    //         rangeSlider.addEventListener("input", showSliderValue, false);
+    //     }
+
+    //     return () => {
+    //         if (rangeSlider && rangeBullet) {
+    //             rangeSlider.removeEventListener("input", showSliderValue);
+    //         }
+    //     };
+    // }, []);
+
+    function showSliderValue() {
+        const rangeSlider = document.getElementById("rs-range-line");
+        const rangeBullet = document.getElementById("rs-bullet");
+
+        if (rangeSlider && rangeBullet) {
+            rangeBullet.innerHTML = rangeSlider.value;
+            const bulletPosition = rangeSlider.value / rangeSlider.max;
+            rangeBullet.style.left = `${bulletPosition * rangeSlider.offsetWidth}px`;
+        }
     }
 
-    const slider = document.getElementById('mySlider');
-    const sliderValue = document.getElementById('sliderValue');
-
-    slider.addEventListener('input', function() {
-        const value = this.value;
-        sliderValue.textContent = value;
-        const percent = (value - this.min) / (this.max - this.min);
-        const thumbWidth = getComputedStyle(this).getPropertyValue('--thumb-width');
-        const thumbPosition = percent * (this.offsetWidth - parseFloat(thumbWidth));
-        sliderValue.style.left = thumbPosition + 'px';
-    });
 
     return (
         <div>
@@ -72,31 +86,39 @@ export default function Settings() {
                 </button>
                 <div className="contentSetting">
                     <div className ="profile-options">
-                        <button className="profile-icon-btn"><img src={Man1} alt ="pfp 1"></img></button>
+                        <button className="profile-icon-btn"><img src={Man1} alt ="pfp 1" ></img></button>
                         <button className="profile-icon-btn"><img src={Man2} alt ="pfp 2"></img></button>
                         <button className="profile-icon-btn"><img src={Man3} alt ="pfp 3"></img></button>
-                        <button className="profile-icon-btn"><img src={Woman1} alt ="pfp 4"></img></button>
-                        <button className="profile-icon-btn"><img src={Woman2} alt ="pfp 5"></img></button>
-                        <button className="profile-icon-btn"><img src={Woman3} alt ="pfp 6"></img></button>
-                        <button className="profile-icon-btn"><img src={Woman4} alt ="pfp 6"></img></button>
+                        <button className="profile-icon-btn"><img src={Woman1} alt ="pfp 4" ></img></button>
+                        <button className="profile-icon-btn"><img src={Woman2} alt ="pfp 5" ></img></button>
+                        <button className="profile-icon-btn"><img src={Woman3} alt ="pfp 6" ></img></button>
                     </div>
                 </div>
 
                 <button type="button" className="collapsible">Change Username</button>
                 <div className="contentSetting">
                     <form action="#">
-                        <label htmlFor="Name">New Username: </label>
+                        <label htmlFor="Name"><p className="content_paragraph"></p></label>
                         <input type="type" id="Name" name="Name" className="text-line" />
                     </form>
                 </div>
                 <button type="button" className="collapsible">
                     Change Walking Goal
                 </button>
+
                 <div className="contentSetting">
-                    <p className="content_paragraph">Current Walking Goal: 30 km</p>
-                    <div className="slider-container">
-                        <input type="range" min="0" max="100" value='0' className="slider" id='mySlider' />
-                            <span class ="sldier-value" id="sliderVlaye">0</span>
+                    <div className="container">
+  
+                        <div className="range-slider">
+                            <span id="rs-bullet" className="rs-label">0</span>
+                            <input id="rs-range-line" className="rs-range" type="range" value="0" min="0" max="200"/>
+                        </div>
+                        
+                        <div className="box-minmax">
+                            <span>0</span><span>200</span>
+                        </div>
+                        
+                    
                     </div>
                 </div>
             </div>
