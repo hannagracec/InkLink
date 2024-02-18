@@ -331,8 +331,16 @@
   }
 
   
-  .selection option {
-    width: 100%; /* Set the width to 100% of its container */
-    padding: 10px; /* Add some padding to improve appearance */
-    font-size: 200px; /* Set the font size */
+  .selection select {
+    width: 100%; /* Set the width to 100% */
+    padding: 10px; /* Add padding */
+    font-size: 18px; /* Set font size */
+    background-color: orange; /* Set background color */
+    color: white; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+}
+
+.selection select:focus {
+    outline: none; /* Remove outline on focus */
 }

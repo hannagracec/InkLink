@@ -60,15 +60,6 @@ export default function Settings() {
 
             <div>
                 <button type="button" className="collapsible">
-                    General
-                </button>
-                <div className="contentSetting">
-                    
-
-                </div>
-
-
-                <button type="button" className="collapsible">
                     Change Profile Picture
                 </button>
                 <div className="contentSetting">
@@ -186,12 +177,12 @@ export default function Settings() {
                 </div>
 
                 <button type="button" className="collapsible">
-                    Change City
+                    Change Location
                 </button>
                 <div className="contentSetting">
                     <div className='selection'>
-                    <label for="cities">Choose your city  </label>
                     <select id="cities" name ="cities">
+                        <option value="None">--None--</option>
                         <option value="Airdrie">Airdrie</option>
                         <option value="Brooks">Brooks</option>
                         <option value="Calgary">Calgary</option>
