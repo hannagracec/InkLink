@@ -10,31 +10,25 @@ import './Books.css';
 import HamburgerIcon from './images/hamburger-icon.png';
 import AddIcon from './images/add-icon.png';
 import Book1 from './images/Books1.png'
-import Book3 from './images/Book3.png'
-import Book4 from './images/Book4.png'
-import Book5 from './images/Book5.png'
-import Book6 from './images/Book6.png'
-import Book7 from './images/Book7.png'
-import Book8 from './images/Book8.png'
-import Book9 from './images/Book9.png'
-import Book10 from './images/Book10.png'
-import Book11 from './images/Book11.png'
-import Book12 from './images/Book12.png'
-import Book13 from './images/Book13.png'
-import Book14 from './images/Book14.png'
-import Book15 from './images/Book15.png'
-import Book16 from './images/Book16.png'
-import Book17 from './images/Book17.png'
-import Book18 from './images/Book18.png'
-import Book19 from './images/Book19.png'
-import Book20 from './images/Book20.png'
-import homeIcon from '../pages/images/House.svg';
-import mapIcon from '../pages/images/map-black.svg';
-import { Link } from 'react-router-dom';
-import friendIcon from '../pages/images/Group.svg'
-import bookIconRed from '../pages/images/book-red.svg'
-
-
+import Star from './images/star.jpg'
+import Lemon from './images/lemon.jpg'
+import Pink from './images/pink.jpg'
+import Blue from './images/blue.jpg'
+import Sea from './images/sea.jpg'
+import La from './images/la.jpg'
+import Italy from './images/italy.jpg'
+import NewYork from './images/newyork.jpg'
+import Greek from './images/greece.jpg'
+import Coast from './images/coast.jpg'
+import Beach from './images/beach.jpg'
+import Les from './images/les.jpg'
+import Coco from './images/coco.jpg'
+import Shell from './images/shell.jpg'
+import Bali from './images/bali.jpg'
+import Leaf from './images/leaf.jpg'
+import Hills from './images/hills.jpg'
+import Mount from './images/mount.jpg'
+import Shell2 from './images/shell2.jpg'
 export default function Books() {
     const [catalog, setCatalog] = useState([]);
 
@@ -69,8 +63,12 @@ export default function Books() {
                     <div className="book-list-container">
                         <div className="book-list">
                             {/* Default book image for currently reading section */}
-                            <img src={Book3} alt="Book 3" />
-                            <img src={Book4} alt="Book 4" />
+                            <img src={Star} alt="Harry"/>
+                            <img src={Pink} alt="Default Book" />
+                            <img src={Blue} alt="Default Book" />
+                            <img src={Lemon} alt="Default Book" />
+                            
+                            <img src={Sea} alt="Default Book" />
                         </div>
                     </div>
                 </div>
@@ -80,17 +78,12 @@ export default function Books() {
                     <div className="book-list-container">
                         <div className="book-list">
                             {/* Default book image for recommended books section */}
-                            {/* <img src="https://via.placeholder.com/150" alt="Default Book" /> */}
-                            <img src={Book5} alt="Book 5" />
-                            <img src={Book6} alt="Book 6" />
-                            <img src={Book7} alt="Book 7" />
-                            <img src={Book8} alt="Book 8" />
-                            <img src={Book9} alt="Book 9" />
-                            <img src={Book10} alt="Book 10" />
-                            <img src={Book11} alt="Book 11" />
-                            <img src={Book12} alt="Book 12" />
-                            <img src={Book13} alt="Book 13" />
-                            <img src={Book14} alt="Book 14" />
+                            <img src={La} alt="Default Book" />
+                            <img src={Italy} alt="Default Book" />
+                            <img src={NewYork} alt="Default Book" />
+                            <img src={Greek} alt="Default Book" />
+                            <img src={Coast} alt="Default Book" />
+                            <img src={Beach} alt="Default Book" />
                         </div>
                     </div>
                 </div>
@@ -100,11 +93,11 @@ export default function Books() {
                     <div className="book-list-container">
                         <div className="book-list">
                             {/* <img src="https://via.placeholder.com/150" alt="Default Book" /> */}
-                            <img src={Book15} alt="Book 15" />
-                            <img src={Book16} alt="Book 16" />
-                            <img src={Book17} alt="Book 17" />
-                            <img src={Book18} alt="Book 18" />
-                            <img src={Book19} alt="Book 19" />
+                            <img src={Les} alt="Book1" />
+                            <img src={Coco} alt="Book1" />
+                            <img src={Shell} alt="Book1" />
+                            <img src={Bali} alt="Book1" />
+                            <img src={Leaf} alt="Book1" />
                             
                             
                         </div>
@@ -115,12 +108,11 @@ export default function Books() {
                     <div className="section-header">Catalog</div>
                     <div className="book-list-container">
                         <div className="book-list">
-                            <img src={Book20} alt="Book 20" />
-                            <img src={Book15} alt="Book 15" />
-                            <img src={Book16} alt="Book 16" />
-                            <img src={Book17} alt="Book 17" />
-                            <img src={Book18} alt="Book 18" />
-                            <img src={Book19} alt="Book 19" />
+                            <img src={Hills} alt="Default Book" />
+                            <img src={Mount} alt="Default Book" />
+                            <img src={Shell2} alt="Default Book" />
+                            <img src={Lemon} alt="Default Book" />
+                            <img src={Pink} alt="Default Book" />
                             {catalog.map((book) => (
                                 <div key={book.id} className="book">
                                     <img src="https://via.placeholder.com/150" alt="Default Book" />

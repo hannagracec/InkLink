@@ -1,42 +1,49 @@
-/* Container styles */
 .first-page-container {
+    font-family: "Roboto", sans-serif;
+    background-color: #ebebeb;
+    color: rgb(34, 34, 34);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #EDEEF0;
-    font-family: 'Roboto Condensed', sans-serif;
-    position: relative;
     overflow: hidden; /* Hide overflow for background shapes */
 }
 
-/* Background shapes */
 .background-shapes {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #FFD1B2 0%, #EDEEF0 50%, #FFD1B2 100%);
+    background: linear-gradient(135deg, #ff6865 1%, #FFBD44 10%, #EDEEF0 50%, #fbb789 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-/* Content container */
-.content-1 {
-    z-index: 1; /* Ensure content is above background shapes */
+.content {
     text-align: center;
     padding: 20px;
+    position: relative; /* Position for absolute positioning of logo */
 }
 
-/* Heading styles */
-.first-page-container h1 {
-    color: #FF5236; /* Red heading color */
-    margin-bottom: 20px;
-    opacity: 0; /* Initial opacity */
+.slide-in {
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(-20px); /* Move element up by 20px initially */
     animation: slideIn 1s ease forwards; /* Apply animation with adjusted timing */
+    color: #FF5236; /* Red color */
 }
 
-/* Button styles */
+@keyframes slideIn {
+    from {
+        opacity: 0; /* Start from opacity 0 */
+        transform: translateY(-20px); /* Start from 20px above its original position */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+        transform: translateY(0); /* End at its original position */
+    }
+}
+
+
 .sign-in-button {
     padding: 12px 24px;
     background-color: #FFBD44; /* Red button color */
@@ -47,15 +54,107 @@
     font-family: 'Roboto Condensed', sans-serif;
     transition: background-color 0.3s ease;
     text-decoration: none;
+    margin-bottom: 20px; /* Add some space between button and logo */
+    width: 250px;
+    display: inline-block;
+    text-align: center;
 }
 
 .sign-in-button:hover {
-    background-color: #FF5236; /* Orange hover color */
+    background-color: #FF5236; /* Red hover color */
 }
 
-/* Animation to slide in the header */
-@keyframes slideIn {
+.logo-container {
+    position: absolute;
+    top: calc(50% + 100px); /* Adjust the position to be below the sign-in button */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: left 0.5s ease; /* Apply transition for smooth movement */
+    display: flex; /* Make the container a flex container */
+    align-items: center; /* Align items vertically */
+}
+
+.logo {
+    width: 90px; /* Increased size of the logo */
+    margin-right: 10px; /* Add margin to separate from slogan */
+    border-radius: 50%;
+    transition: transform 0.5s ease; /* Apply transition for smooth movement */
+}
+
+.logo-container.move-left {
+    left: calc(50% - 100px); /* Adjusted position for the logo when moved to the left */
+}
+
+.slogan-container {
+    position: absolute;
+    top: calc(50% + 100px); /* Adjust the position to be below the sign-in button */
+    /* left: 50%; Removed to make it relative to logo-container */
+    transform: translateX(-50%);
+    display: none; /* Hide slogan by default */
+    color: #FF5236; /* Change to match the provided red color */
+    font-weight: bold; /* Added to make the slogan text more bold */
+    background-color: #ffffff; /* Change to match the provided background color */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 15px; /* Add border radius for rounded corners */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for opacity */
+    white-space: nowrap;
+}
+.slogan-container.show {
+    opacity: 1; /* Show the slogan */
+}
+
+.logo-container.move-left .slogan-container {
+    display: block;
+    opacity: 1;
+    transform: translate(-140%, -50%);
+    
+    animation: slideSlogan 0.5s forwards;
+}
+
+@keyframes slideSlogan {
+    from {
+        opacity: 0;
+        transform: translate(-70%, -20px); /* Adjust the translation as needed */
+    }
     to {
-        opacity: 1; /* Show the header */
+        opacity: 1;
+        transform: translate(-70%, 0);
+    }
+}
+
+.slideshow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    animation: slideShow 9s infinite;
+}
+
+.slideshow img {
+    width: 100px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.slideshow img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slideshow img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.slideshow img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes slideShow {
+    0%, 100% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
     }
 }
