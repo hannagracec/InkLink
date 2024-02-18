@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reader App</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFBD44;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+        header {
+            background-color: #FF5236;
+            color: #FFFFFF;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        .container {
+            width: 400px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #EDEEF0;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .add-btn {
+            background-color: #C4C4C4;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        .add-btn:hover {
+            background-color: #FF5236;
+        }
+        .section {
+            background-color: #F8F8F8;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .section-header {
+            background-color: #FF5236;
+            color: #FFFFFF;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        .book-list {
+            padding: 10px;
+        }
+        .book {
+            border-bottom: 1px solid #C4C4C4;
+            padding: 10px 0;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Book Reader App</h1>
+    </header>
+    <div class="container">
+        <button class="add-btn" onclick="addBook()">+ Add a Book</button>
+        
+        <div class="section">
+            <div class="section-header">Recommended Books</div>
+            <div class="book-list" id="recommendedBooks"></div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Favorite Books</div>
+            <div class="book-list" id="favoriteBooks"></div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Currently Reading</div>
+            <div class="book-list" id="currentlyReadingBooks"></div>
+        </div>
+    </div>
+
+    <script>
+        function addBook() {
+            // Sample book name for testing purposes
+            var bookName = "Sample Book";
+            
+            var newBookElement = document.createElement("div");
+            newBookElement.classList.add("book");
+            newBookElement.textContent = bookName;
+
+            // Determine which section to add the book to
+            var section = document.getElementById("recommendedBooks");
+
+            section.appendChild(newBookElement);
+        }
+    </script>
+</body>
+</html>
