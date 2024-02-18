@@ -47,18 +47,18 @@ function Friends() {
 
             {/* List of people */}
             <div className="people-list">
-                <div className="person-card">
+                <Link to="/chat" className="person-card">
                     {/* Individual person 1 */}
-                    <Link to="/chat" className="person">
+                    <div className="person">
                         <div className="profile-image">
                             <img className='profile' src={Woman1} alt="Profile Pic" />
                         </div>
                         <div className="person-info">
-                            <h2>Tania Monge</h2>
+                            <h2 className="first-person">Tania Monge</h2>
                             {/* Add more information about the person here */}
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
                 
 
                 <div className="person-card">

@@ -97,6 +97,10 @@
     margin-bottom: 100px;
 }
 
+.person-card {
+    text-decoration: none;
+}
+
 .person:hover {
     transform: translateY(-3px); /* Move the person div 3px up on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Further increase the shadow size on hover */
@@ -159,3 +163,4 @@ body {
 .friends-subtitle {
     margin-left: 10px;
 }
+

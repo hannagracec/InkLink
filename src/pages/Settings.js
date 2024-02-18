@@ -6,7 +6,9 @@ import Woman2 from "../pages/FriendsPP/Woman2.png";
 import Woman3 from "../pages/FriendsPP/Woman3.png";
 import settingsicon from '../pages/SettingsImages/settingsicon.png';
 import React, { useEffect } from 'react';
+import arrow from './images/arrowicon.svg';
 import './Settings.css';
+import { Link } from 'react-router-dom';
 
 export default function Settings() {
     useEffect(() => {
@@ -50,15 +52,21 @@ export default function Settings() {
             <div className="topSetting">
                 <table>
                     <tr>
-                        <th><h1 className="headerSetting">Settings</h1></th>
+                        <th className="setting-header">
+                            <Link to="/Home">
+                                <img className="back-arrow" src={arrow} alt="arrow icon"/>
+                            </Link>
+                            <h1 className="headerSetting">Settings</h1>
+                            
+                        </th>
                         <div style={{ position: 'absolute', top: 25, right: 30 }}>
-                            <img src={settingsicon} alt="settings icon" width="40px" />
+                            <img className="gear-icon" src={settingsicon} alt="settings icon" width="40px" />
                         </div>
                     </tr>
                 </table>
             </div>
 
-            <div>
+            <div className="settings-container">
                 <button type="button" className="collapsible">
                     Change Profile Picture
                 </button>
