@@ -1,51 +1,64 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import Point from '../pages/images/Point.svg';
+import coffeeIcon from '../pages/images/coffeepoint.svg';
+import benchIcon from '../pages/images/benchpoint.svg';
+import parkIcon from '../pages/images/park.svg';
 import L from 'leaflet';
+import marker from '../pages/images/Point.svg';
+import './Map.css'
 
 function MapPage() {
-    const customIcon = L.icon({
-        iconUrl: Point,
-        iconSize: [25, 41], // Adjust icon size as needed
-        iconAnchor: [12, 41], // Adjust icon anchor point as needed
-    });
-    const userLocation = [51.045387680229595, -114.05500431847761];
+    const centralLibraryLocation = [51.04546994292526, -114.05504115199753];
     
-    const [filteredLocations, setFilteredLocations] = useState([
-        { id: 1, name: 'Location 1', coordinates: [51.505, -0.09] },
-        { id: 2, name: 'Location 2', coordinates: [51.515, -0.1] },
-        { id: 3, name: 'Location 3', coordinates: [51.495, -0.1] },
-    ]);
+    const [filteredLocations, setFilteredLocations] = useState([]);
 
-    const handleFilter = (filterId) => {
-        // Example: Filter locations based on the selected filter ID
-        const filtered = filterId
-            ? filteredLocations.filter((location) => location.id === filterId)
-            : filteredLocations;
+    const allLocations = [
+        { id: 1, name: 'Phil & Sebastion Coffee', coordinates: [51.047864316363956, -114.04993585014859], type: 'coffee' },
+        { id: 2, name: 'Good Earth', coordinates: [51.04535364654988, -114.05648111859608], type: 'coffee' },
+        { id: 3, name: 'Platform Cafe', coordinates: [51.04425606564293, -114.05566865006111], type: 'coffee' },
+        { id: 4, name: 'Harmony Park', coordinates: [51.04876499774252, -114.06360042334693], type: 'park' },
+        { id: 5, name: 'Flyover Park', coordinates: [51.05059954060166, -114.04862296839754], type: 'park' },
+        { id: 6, name: 'Enmax Park', coordinates: [51.03802719071816, -114.0477671318806], type: 'park' },
+        { id: 7, name: 'Bench 1', coordinates: [51.0445509006144, -114.04452920062622], type: 'bench' },
+        { id: 8, name: 'Bench 2', coordinates: [51.03676887335512, -114.04742568723623], type: 'bench' },
+        { id: 9, name: 'Bench 3', coordinates: [51.036931998567084, -114.0469470166468], type: 'bench' },
+    ];
+
+    const handleFilter = (filterType) => {
+        // Filter locations based on the selected filter type
+        const filtered = filterType
+            ? allLocations.filter((location) => location.type === filterType)
+            : allLocations;
 
         setFilteredLocations(filtered);
     };
 
     return (
-        <div >
-            <h1>Map Page</h1>
-            <div>
-                <button onClick={() => handleFilter(null)}>Show All</button>
-                <button onClick={() => handleFilter(1)}>Filter 1</button>
-                <button onClick={() => handleFilter(2)}>Filter 2</button>
-                {/* Add more buttons for different filters */}
+        <div className='map-header'>
+            <h1 className='map-title'>My Map</h1>
+            <div className='filter-section'>
+                <button className="filter-btn" onClick={() => handleFilter('coffee')}>Cafe's</button>
+                <button className="filter-btn" onClick={() => handleFilter('bench')}>Benches</button>
+                <button className="filter-btn" onClick={() => handleFilter('park')}>Parks</button>
+                <button className="filter-btn" onClick={() => handleFilter(null)}>Show All</button>
             </div>
-            <MapContainer center={userLocation} zoom={13} style={{ height: '400px' }}>
+            <MapContainer center={centralLibraryLocation} zoom={13} style={{ height: '600px' }}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={userLocation} icon={customIcon}>
-                    <Popup>University of Calgary</Popup>
+                {/* Central Library Marker */}
+                <Marker position={centralLibraryLocation} icon={L.icon({
+                    iconUrl: marker,
+                    iconSize: [32, 32],
+                    iconAnchor: [16, 32],
+                })}>
+                    <Popup>Your Location</Popup>
                 </Marker>
+                {/* Filtered Locations Markers */}
                 {filteredLocations.map((location) => (
-                    <Marker key={location.id} position={location.coordinates}>
+                    <Marker key={location.id} position={location.coordinates} icon={getMarkerIcon(location.type)}>
                         <Popup>{location.name}</Popup>
                     </Marker>
                 ))}
@@ -54,4 +67,30 @@ function MapPage() {
     );
 }
 
+function getMarkerIcon(type) {
+    switch (type) {
+        case 'coffee':
+            return L.icon({
+                iconUrl: coffeeIcon,
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+            });
+        case 'bench':
+            return L.icon({
+                iconUrl: benchIcon,
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+            });
+        case 'park':
+            return L.icon({
+                iconUrl: parkIcon,
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+            });
+        default:
+            return null;
+    }
+}
+
 export default MapPage;
+
