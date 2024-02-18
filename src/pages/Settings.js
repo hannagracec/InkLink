@@ -60,6 +60,15 @@ export default function Settings() {
 
             <div>
                 <button type="button" className="collapsible">
+                    General
+                </button>
+                <div className="contentSetting">
+                    
+
+                </div>
+
+
+                <button type="button" className="collapsible">
                     Change Profile Picture
                 </button>
                 <div className="contentSetting">
@@ -91,8 +100,7 @@ export default function Settings() {
                 </button>
 
                 <div className="contentSetting">
-                    <div className="container">
-  
+
                         <div className="range-slider">
                             <span id="rs-bullet" className="rs-label">0</span>
                             <input id="rs-range-line" className="rs-range" type="range" value="0" min="0" max="200"/>
@@ -101,8 +109,108 @@ export default function Settings() {
                         <div className="box-minmax">
                             <span>0</span><span>200</span>
                         </div>
-                        
-                    
+                 </div>
+
+                <button type="button" className="collapsible">
+                    Update Libraries Visited
+                </button>
+                <div className="contentSetting">
+                    <label className="library-container">W.R. Castell Central Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Alexander Calhoun Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Bowness Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Fish Creek Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Glenmore Square Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Louise Riley Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Memorial Park Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Nose Hill Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Shawnessy Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Signal Hill Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">CrowfootLibrary
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Village Square Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Southwood Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Saddletowne Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Country Hills Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Judith Umbach Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Westhills Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                </div>
+
+                <button type="button" className="collapsible">
+                    Change City
+                </button>
+                <div className="contentSetting">
+                    <div className='selection'>
+                    <label for="cities">Choose your city  </label>
+                    <select id="cities" name ="cities">
+                        <option value="Airdrie">Airdrie</option>
+                        <option value="Brooks">Brooks</option>
+                        <option value="Calgary">Calgary</option>
+                        <option value="Camrose">Camrose</option>
+                        <option value="Cold Lake">Cold Lake</option>
+                        <option value="Edmonton">Edmonton</option>
+                        <option value="Fort Saskatchewan">Fort Saskatchewan</option>
+                        <option value="Grande Prairie">Grande Prairie</option>
+                        <option value="Leduc">Leduc</option>
+                        <option value="Lethbridge">Lethbridge</option>
+                        <option value="Lloydminster">Lloydminster</option>
+                        <option value="Medicine Hat">Medicine Hat</option>
+                        <option value="Red Deer">Red Deer</option>
+                        <option value="Spruce Grove">Spruce Grove</option>
+                        <option value="St. Albert">St. Albert</option>
+                        <option value="Wetaskiwin">Wetaskiwin</option>
+           
+
+                    </select>
                     </div>
                 </div>
             </div>
