@@ -1,14 +1,16 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Friends from './pages/Friends';
+import FindFriends from './pages/FindFriends';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route/>
-      </Switch>
-    </Router>
+    <div>
+      <Friends />
+      <FindFriends/>
+
+    </div>
+    
   );
 }
 
