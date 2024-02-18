@@ -7,6 +7,10 @@ import Location from "../pages/images/Location.svg";
 import Walking from "../pages/images/exercise_walking.svg"
 import React from 'react';
 import { Link } from 'react-router-dom';
+import homeIconRed from '../pages/images/house-red.svg';
+import friendIcon from '../pages/images/Group.svg'
+import bookIcon from '../pages/images/Book.svg'
+import mapIcon from '../pages/images/map-black.svg'
 
 export default function HomePage() {
   return (
@@ -85,7 +89,38 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <Navbar/>
     </div>
+  );
+}
+
+function Navbar() {
+  return (
+      <div className="navbar">
+          <div className="navbar-links">
+              <Link to="/Home" className='home-link'>
+                  <div className='home-icon' >
+                      <img className="link-icon" src={homeIconRed} alt="home icon"/>
+                  </div>
+                  <p className='home-subtitle'>Home</p>
+              </Link>
+              <Link to="/books">
+                  <div className='books-icon' >
+                      <img className="link-icon" src={bookIcon} alt="book icon"/>
+                  </div>
+              </Link>
+              <Link to="/friends">
+                  <div className='friends-icon' >
+                      <img className="link-icon" src={friendIcon} alt="friend icon"/>
+                  </div>
+              </Link>
+              <Link to="/map">
+                  <div className='map-icon' >
+                      <img className="link-icon" src={mapIcon} alt="map icon"/>
+                  </div>
+              </Link>
+          </div>
+      </div>
   );
 }
   

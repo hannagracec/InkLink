@@ -5,6 +5,10 @@ html, body {
     overflow-x: hidden;
 }
 
+body {
+    margin: 0;
+}
+
 .container {
     background-color: #F5F5F5;; /* Background color */
     min-height: 100vh; /* Ensure container fills viewport height */
@@ -13,8 +17,8 @@ html, body {
     align-items: center;
 }
 
-.header {
-    background-color: #F5F5F5;; /* Header background color */
+.header-books {
+    background-color: #FFFFFF;; /* Header background color */
     color: #121212; /* Header text color */
     width: 100%;
     display: flex;
@@ -51,10 +55,11 @@ html, body {
     margin-right: 20px;
 }
 
-.content {
+.content-books {
     width: 90%;
     max-width: 400px;
     margin-top: 10px;
+    margin-bottom: 80px;
 }
 
 .section {
@@ -142,4 +147,41 @@ html, body {
 .section:hover {
     transform: scale(1.02); /* Scale up the section by 5% on hover */
     transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px; 
+    color: #222222;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.navbar {
+    background-color: white;
+    margin-bottom: 0;
+    height: 10vh;
+}
+
+.book-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #d64d38;
+    background-color: rgb(252, 99, 75, 0.5);
+    width: 120px;
+    justify-content: center;
+    border-radius: 30px;
+    font-weight: 500;
+    height: 40px;
+}
+
+.link-icon {
+    width: 30px;
+}
+
+.books-subtitle {
+    margin-left: 10px;
 }
