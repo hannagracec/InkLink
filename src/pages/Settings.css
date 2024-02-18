@@ -1,5 +1,9 @@
+.top {
+    padding-top: 10px;
+}
+
 .header {
-    margin-top: 34px;
+    margin-top: 35px;
     margin-left: 20px;
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
