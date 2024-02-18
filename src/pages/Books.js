@@ -29,6 +29,12 @@ import Leaf from './images/leaf.jpg'
 import Hills from './images/hills.jpg'
 import Mount from './images/mount.jpg'
 import Shell2 from './images/shell2.jpg'
+import { Link } from 'react-router-dom';
+import homeIcon from '../pages/images/House.svg';
+import bookIconRed from '../pages/images/book-red.svg';
+import friendIcon from '../pages/images/Group.svg';
+import mapIcon from '../pages/images/map-black.svg';
+
 export default function Books() {
     const [catalog, setCatalog] = useState([]);
 
