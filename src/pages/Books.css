@@ -1,11 +1,12 @@
 /* color: #121212; */
 /* Books.css */
-body {
+html, body {
     margin: 0; /* Remove default margin */
+    overflow-x: hidden;
 }
 
 .container {
-    background-color: #FFFFFF;; /* Background color */
+    background-color: #F5F5F5;; /* Background color */
     min-height: 100vh; /* Ensure container fills viewport height */
     display: flex;
     flex-direction: column;
@@ -13,7 +14,7 @@ body {
 }
 
 .header {
-    background-color: #FFFFFF;; /* Header background color */
+    background-color: #F5F5F5;; /* Header background color */
     color: #121212; /* Header text color */
     width: 100%;
     display: flex;
@@ -34,7 +35,7 @@ body {
 }
 
 .add-btn {
-    background-color: #FFFFFF; /* Button background color */
+    background-color: #F5F5F5; /* Button background color */
     border: none;
     width: 25px; 
     height: 25px;
@@ -43,7 +44,7 @@ body {
 
 
 .hamburger-btn {
-    background-color: #FFFFFF; /* Hamburger button color */
+    background-color: #F5F5F5; /* Hamburger button color */
     width: 30px;
     height: 30px;
     margin-left: 10px;
@@ -61,7 +62,7 @@ body {
     border-radius: 20px;
     margin-bottom: 20px;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow behind sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Add shadow behind sections */
     border-radius: 20px; /* Add border-radius for a rounded corner effect */
     overflow: hidden; /* Ensure content does not overflow outside the section */
 }
@@ -132,3 +133,13 @@ body {
     margin-right: 10px; /* Add space between books */
 }
 
+@media (max-width: 400px) {
+    .container, .section, .header {
+        width: 100%; /* Adjust width to fit smaller screens */
+    }
+}
+
+.section:hover {
+    transform: scale(1.02); /* Scale up the section by 5% on hover */
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}

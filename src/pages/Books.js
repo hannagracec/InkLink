@@ -10,6 +10,25 @@ import './Books.css';
 import HamburgerIcon from './images/hamburger-icon.png';
 import AddIcon from './images/add-icon.png';
 import Book1 from './images/Books1.png'
+import Book3 from './images/Book3.png'
+import Book4 from './images/Book4.png'
+import Book5 from './images/Book5.png'
+import Book6 from './images/Book6.png'
+import Book7 from './images/Book7.png'
+import Book8 from './images/Book8.png'
+import Book9 from './images/Book9.png'
+import Book10 from './images/Book10.png'
+import Book11 from './images/Book11.png'
+import Book12 from './images/Book12.png'
+import Book13 from './images/Book13.png'
+import Book14 from './images/Book14.png'
+import Book15 from './images/Book15.png'
+import Book16 from './images/Book16.png'
+import Book17 from './images/Book17.png'
+import Book18 from './images/Book18.png'
+import Book19 from './images/Book19.png'
+import Book20 from './images/Book20.png'
+
 
 
 export default function Books() {
@@ -23,7 +42,7 @@ export default function Books() {
             imageUrl: "https://via.placeholder.com/150", // Placeholder image URL
         };
 
-        setCatalog([...catalog, newBook]);
+        setCatalog([newBook, ...catalog]);
     }
 
     return (
@@ -46,40 +65,42 @@ export default function Books() {
                     <div className="book-list-container">
                         <div className="book-list">
                             {/* Default book image for currently reading section */}
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
+                            <img src={Book3} alt="Book 3" />
+                            <img src={Book4} alt="Book 4" />
                         </div>
                     </div>
                 </div>
 
                 <div className="section">
-                    <div className="section-header">Recommended Books</div>
+                    <div className="section-header">Recommended</div>
                     <div className="book-list-container">
                         <div className="book-list">
                             {/* Default book image for recommended books section */}
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
+                            {/* <img src="https://via.placeholder.com/150" alt="Default Book" /> */}
+                            <img src={Book5} alt="Book 5" />
+                            <img src={Book6} alt="Book 6" />
+                            <img src={Book7} alt="Book 7" />
+                            <img src={Book8} alt="Book 8" />
+                            <img src={Book9} alt="Book 9" />
+                            <img src={Book10} alt="Book 10" />
+                            <img src={Book11} alt="Book 11" />
+                            <img src={Book12} alt="Book 12" />
+                            <img src={Book13} alt="Book 13" />
+                            <img src={Book14} alt="Book 14" />
                         </div>
                     </div>
                 </div>
 
                 <div className="section">
-                    <div className="section-header">Favorite Books</div>
+                    <div className="section-header">Favourites</div>
                     <div className="book-list-container">
                         <div className="book-list">
                             {/* <img src="https://via.placeholder.com/150" alt="Default Book" /> */}
-                            <img src={Book1} alt="Book1" />
-                            <img src={Book1} alt="Book1" />
-                            <img src={Book1} alt="Book1" />
-                            <img src={Book1} alt="Book1" />
-                            <img src={Book1} alt="Book1" />
+                            <img src={Book15} alt="Book 15" />
+                            <img src={Book16} alt="Book 16" />
+                            <img src={Book17} alt="Book 17" />
+                            <img src={Book18} alt="Book 18" />
+                            <img src={Book19} alt="Book 19" />
                             
                             
                         </div>
@@ -87,14 +108,15 @@ export default function Books() {
                 </div>
 
                 <div className="section">
-                    <div className="section-header">Book Catalog</div>
+                    <div className="section-header">Catalog</div>
                     <div className="book-list-container">
                         <div className="book-list">
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
-                            <img src="https://via.placeholder.com/150" alt="Default Book" />
+                            <img src={Book20} alt="Book 20" />
+                            <img src={Book15} alt="Book 15" />
+                            <img src={Book16} alt="Book 16" />
+                            <img src={Book17} alt="Book 17" />
+                            <img src={Book18} alt="Book 18" />
+                            <img src={Book19} alt="Book 19" />
                             {catalog.map((book) => (
                                 <div key={book.id} className="book">
                                     <img src="https://via.placeholder.com/150" alt="Default Book" />
