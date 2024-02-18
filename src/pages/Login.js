@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css'; // Import CSS file for styling
-import logo from './images/logo.png'; 
+import logo from './images/iconlogo.png'; 
 import { Link } from 'react-router-dom';
 
 export default function Login() {
@@ -20,41 +20,44 @@ export default function Login() {
 
     return (
         <div className="login-container">
-            <div className = "login-logo">
+            <div className='login-content'>
+                <div className = "login-logo">
 
-            </div>
-            <img src={logo} alt="Logo" className="login-logo" /> {/* Insert the logo image */}
-            <div className = "login-header">
-            <h2> Sign-In  </h2>
-            </div>
-           
-            <form onSubmit={handleSubmit} className="login-form">
-                <div>
-                    <label htmlFor="username">Username:</label>
-                    <input 
-                        type="text" 
-                        id="username" 
-                        name="username" 
-                        required 
-                        className="login-input"
-                    />
                 </div>
-                <div>
-                    <label htmlFor="password">Password:</label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        name="password" 
-                        required 
-                        className="login-input"
-                    />
+                <img src={logo} alt="Logo" className="login-logo" /> {/* Insert the logo image */}
+                <div className = "login-header">
+                    <h2> Sign-In  </h2>
                 </div>
-                <Link className="link" to="/Home">
-                    <div className="login-button">Login</div>
-                </Link>
-            </form>
-            <div className="sign-up-link">
-                <p>Don't have an account? <a href="/signup">Sign up</a></p>
+                <div className='form-section'>
+                    <form onSubmit={handleSubmit} className="login-form">
+                        <div>
+                            <label htmlFor="username">Username:</label>
+                            <input 
+                                type="text" 
+                                id="username" 
+                                name="username" 
+                                required 
+                                className="login-input"
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="password">Password:</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                required 
+                                className="login-input"
+                            />
+                        </div>
+                        <Link className="link" to="/Home">
+                            <div className="login-button">Login</div>
+                        </Link>
+                    </form>
+                </div>
+                <div className="sign-up-link">
+                    <p>Don't have an account? <a href="/signup">Sign up</a></p>
+                </div>
             </div>
         </div>
     );
