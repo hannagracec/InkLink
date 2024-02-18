@@ -15,7 +15,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #ff6865 1%, #FFBD44 10%, #EDEEF0 50%, #fbb789 100%);
+    background: linear-gradient(135deg, #ff6865 1%, #FFBD44 5%, #EDEEF0 50%, #fbb789 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -26,10 +26,11 @@
 }
 
 .slide-in {
+    margin-bottom: 0;
     opacity: 0; /* Set initial opacity to 0 */
     transform: translateY(-20px); /* Move element up by 20px initially */
     animation: slideIn 1s ease forwards; /* Apply animation with adjusted timing */
-    color: #FF5236; /* Red color */
+    color: #222222; /* Red color */
 }
 
 @keyframes slideIn {
@@ -46,7 +47,7 @@
 
 .sign-in-button {
     padding: 12px 24px;
-    background-color: #FFBD44; /* Red button color */
+    background-color: #ff814f; /* Red button color */
     color: white; /* White button text color */
     border: none;
     border-radius: 4px;
@@ -54,7 +55,7 @@
     font-family: 'Roboto Condensed', sans-serif;
     transition: background-color 0.3s ease;
     text-decoration: none;
-    margin-bottom: 20px; /* Add some space between button and logo */
+ /* Add some space between button and logo */
     width: 250px;
     display: inline-block;
     text-align: center;
@@ -136,6 +137,7 @@
 }
 
 .slideshow img {
+    margin:0;
     width: 100px;
     height: auto;
     opacity: 0;
