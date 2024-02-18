@@ -9,7 +9,7 @@ export default function FirstPage() {
         <div className="first-page-container">
             <div className="content">
                 <p className="slide-in">Hello, User</p>
-                <h1 className='welcome'>Welcome to App</h1>
+                <h1 className='welcome'>Welcome to InkLink</h1>
                 <Link to="/Login" className="sign-in-button">
                     <p className='signin-text'>Get Started</p>
                     <img src={arrow} alt="arrow"/>
