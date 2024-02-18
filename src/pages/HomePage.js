@@ -11,9 +11,9 @@ import { Link } from 'react-router-dom';
 export default function HomePage() {
   return (
     <div className="body-home">
-      <div className="header-home">
+      <Link to="/settings" className="header-home">
         <img className="profile-home" src={Profile} alt="user profile"/>
-      </div>
+      </Link>
       <div>
         <div className="hello-user">
           <p className="hello">Hello,</p>
