@@ -27,6 +27,7 @@
     letter-spacing: 1px; /* Increase letter spacing */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
     margin:40px;
+    text-decoration: none;
 }
 
 .find-friend-btn:hover {

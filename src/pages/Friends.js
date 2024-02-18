@@ -29,8 +29,8 @@ import Woman3 from "../pages/FriendsPP/Woman3.png";
 import Woman4 from "../pages/FriendsPP/Woman4.png";
 import React from 'react';
 import './Friends.css';
+import { Link } from 'react-router-dom';
 export default Friends;
-
 
 function Friends() {
     return (
@@ -38,7 +38,7 @@ function Friends() {
             {/* Header */}
             <div className="header">
                 <h1 className="title">Your Friends!</h1>
-                <button className="find-friend-btn">Find Friends</button>
+                <Link to="/findFriends" className="find-friend-btn">Find Friends</Link>
             </div>
 
             {/* List of people */}

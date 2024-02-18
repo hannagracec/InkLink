@@ -6,6 +6,7 @@ import MapPage from './pages/Map';
 import FriendsPage from './pages/Friends';
 import BooksPage from './pages/Books';
 import Login from './pages/Login'
+import FindFriends from './pages/FindFriends'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/map" element={<MapPage />} />
         <Route path="/friends" element={<FriendsPage />} />
         <Route path="/books" element={<BooksPage />} />
+        <Route path="/findFriends" element={<FindFriends/>} />
       </Routes>
     </Router>
   );
