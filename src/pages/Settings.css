@@ -108,6 +108,7 @@
     border-bottom: solid #FFBD44 2px;
     padding: 3px 10px;
 }
+           
 
 
 .range-slider {
@@ -311,26 +312,11 @@
     transform: rotate(45deg);
   }
 
-  input {
 
-    /* The native appearance is hidden */
-    appearance: none;
-    -webkit-appearance: none;
-  
-    /* For a circular appearance we need a border-radius. */
-    border-radius: 50%;
-  
-    /* The background will be the radio dot's color. */
-    background: #FF572233;
-  
-    /* The border will be the spacing between the dot and the outer circle */
-    border: 3px solid #FFF;
-  
-    /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
-    box-shadow: 0 0 0 1px #FF5722;
+  .selection{
+    margin-left: 18px;
+    margin-top: -5px;
   }
-
-  
   .selection select {
     width: 100%; /* Set the width to 100% */
     padding: 10px; /* Add padding */
@@ -343,4 +329,10 @@
 
 .selection select:focus {
     outline: none; /* Remove outline on focus */
+}
+
+.location-head{
+    font-size: 20px;
+    font-family: 'Roboto' sans-serif;
+    color: #222222;
 }

@@ -180,29 +180,46 @@ export default function Settings() {
                     Change Location
                 </button>
                 <div className="contentSetting">
-                    <div className='selection'>
-                    <select id="cities" name ="cities">
-                        <option value="None">--None--</option>
-                        <option value="Airdrie">Airdrie</option>
-                        <option value="Brooks">Brooks</option>
-                        <option value="Calgary">Calgary</option>
-                        <option value="Camrose">Camrose</option>
-                        <option value="Cold Lake">Cold Lake</option>
-                        <option value="Edmonton">Edmonton</option>
-                        <option value="Fort Saskatchewan">Fort Saskatchewan</option>
-                        <option value="Grande Prairie">Grande Prairie</option>
-                        <option value="Leduc">Leduc</option>
-                        <option value="Lethbridge">Lethbridge</option>
-                        <option value="Lloydminster">Lloydminster</option>
-                        <option value="Medicine Hat">Medicine Hat</option>
-                        <option value="Red Deer">Red Deer</option>
-                        <option value="Spruce Grove">Spruce Grove</option>
-                        <option value="St. Albert">St. Albert</option>
-                        <option value="Wetaskiwin">Wetaskiwin</option>
-           
-
-                    </select>
-                    </div>
+                    <table>
+                        <tr><td><h3 className="Location-head">Choose a city:</h3></td>
+                        <td><div className='selection'>
+                                <select id="cities" name ="cities">
+                                    <option value="None">--None--</option>
+                                    <option value="Airdrie">Airdrie</option>
+                                    <option value="Brooks">Brooks</option>
+                                    <option value="Calgary">Calgary</option>
+                                    <option value="Camrose">Camrose</option>
+                                    <option value="Cold Lake">Cold Lake</option>
+                                    <option value="Edmonton">Edmonton</option>
+                                    <option value="Fort Saskatchewan">Fort Saskatchewan</option>
+                                    <option value="Grande Prairie">Grande Prairie</option>
+                                    <option value="Leduc">Leduc</option>
+                                    <option value="Lethbridge">Lethbridge</option>
+                                    <option value="Lloydminster">Lloydminster</option>
+                                    <option value="Medicine Hat">Medicine Hat</option>
+                                    <option value="Red Deer">Red Deer</option>
+                                    <option value="Spruce Grove">Spruce Grove</option>
+                                    <option value="St. Albert">St. Albert</option>
+                                    <option value="Wetaskiwin">Wetaskiwin</option>
+                                </select>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr><td><h3 className="Location-head">Choose a town:</h3></td>
+                            <td><div className='selection'>
+                                <select id="towns" name ="towns">
+                                    <option value="None">--None--</option>
+                                    <option value="Banff">Banff</option>
+                                    <option value="Bow Island">Bow Island</option>
+                                    <option value="Chestermere">Chestermere</option>
+                                    <option value="Canmore">Canmore</option>
+                                    <option value="High Level">High Lebel</option>
+                                    <option value="Okotoks">Okotoks</option>
+                                </select>
+                            </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
