@@ -1,3 +1,4 @@
+import settingsicon from '../pages/SettingsImages/settingsicon.png';
 import React, { useEffect, useState } from 'react';
 import './Settings.css';
 
@@ -36,7 +37,14 @@ export default function Settings() {
     return (
         <div>
             <body>
-                <h1 className="header">Settings</h1>
+                <table>
+                    <tr>
+                        <th><h1 className="header">Settings</h1></th>
+                        <div style={{ position: 'absolute', top: 25, right: 30 }}>
+                            <img src={settingsicon} alt="settings icon" width="40px" />
+                        </div>
+                    </tr>
+                </table>
                 <div>
                     <button type="button" className="collapsible">
                         Change Profile Picture
@@ -60,19 +68,18 @@ export default function Settings() {
                         </form>
                     </div>
                     <button type="button" className="collapsible">
-                        <img src="default_profile_pic.jpg"/>
                         Change Walking Goal
                     </button>
                     <div className="content">
-                        <p className="content_paragraph">Current distance walked: 20 km</p>
+                        <p className="content_paragraph">Current Walking Goal: 30 km</p>
                         <div className="slider-container">
-                            <input type="range" min="0" max="100" value={sliderValue} onChange={handleSliderChange} className="slider" />
+                            <input type="range" min="0" max="100" value='0' onChange={handleSliderChange} className="slider" />
                             <div className="slider-labels">
                                 <span>0</span>
                                 <span>100</span>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </body>
         </div>
