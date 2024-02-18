@@ -24,49 +24,27 @@ export default function Settings() {
                 }
             });
         });
-    });
 
-
-        var rangeSlider = document.getElementById("rs-range-line");
-        var rangeBullet = document.getElementById("rs-bullet");
-
-        rangeSlider = document.getElementById("rs-range-line");
-            if (rangeSlider) {
-                rangeSlider.addEventListener("input", showSliderValue, false);
-            }
-
-        function showSliderValue() {
-            rangeBullet.innerHTML = rangeSlider.value;
-            var bulletPosition = (rangeSlider.value / rangeSlider.max);
-            rangeBullet.style.left = (bulletPosition * rangeSlider.offsetWidth) + "px";
-}
-
-    //     const rangeSlider = document.getElementById("rs-range-line");
-    //     const rangeBullet = document.getElementById("rs-bullet");
-
-    //     if (rangeSlider && rangeBullet) {
-    //         rangeSlider.addEventListener("input", showSliderValue, false);
-    //     }
-
-    //     return () => {
-    //         if (rangeSlider && rangeBullet) {
-    //             rangeSlider.removeEventListener("input", showSliderValue);
-    //         }
-    //     };
-    // }, []);
-
-    function showSliderValue() {
         const rangeSlider = document.getElementById("rs-range-line");
         const rangeBullet = document.getElementById("rs-bullet");
-
-        if (rangeSlider && rangeBullet) {
+        
+        rangeSlider.addEventListener("input", showSliderValue, false);
+        
+        function showSliderValue() {
             rangeBullet.innerHTML = rangeSlider.value;
-            const bulletPosition = rangeSlider.value / rangeSlider.max;
-            rangeBullet.style.left = `${bulletPosition * rangeSlider.offsetWidth}px`;
+            const bulletPosition = (rangeSlider.value / rangeSlider.max);
+            rangeBullet.style.left = (bulletPosition * rangeSlider.offsetWidth) + "px";
         }
-    }
+    }, []); // Empty dependency array ensures this effect runs only once, similar to componentDidMount
 
-
+    document.addEventListener('DOMContentLoaded', function() {
+        const button = document.getElementById('toggleButton');
+      
+        button.addEventListener('click', function() {
+          this.classList.toggle('checked');
+        });
+      });
+      
     return (
         <div>
             <div className="topSetting">
@@ -86,20 +64,26 @@ export default function Settings() {
                 </button>
                 <div className="contentSetting">
                     <div className ="profile-options">
-                        <button className="profile-icon-btn"><img src={Man1} alt ="pfp 1" ></img></button>
-                        <button className="profile-icon-btn"><img src={Man2} alt ="pfp 2"></img></button>
-                        <button className="profile-icon-btn"><img src={Man3} alt ="pfp 3"></img></button>
-                        <button className="profile-icon-btn"><img src={Woman1} alt ="pfp 4" ></img></button>
-                        <button className="profile-icon-btn"><img src={Woman2} alt ="pfp 5" ></img></button>
-                        <button className="profile-icon-btn"><img src={Woman3} alt ="pfp 6" ></img></button>
+                        <div className="profile-icon-btn"><img src={Man1} alt ="pfp 1" class ="image"></img></div>
+                        <div className="profile-icon-btn"><img src={Man2} alt ="pfp 2" class ="image"></img></div>
+                        <div className="profile-icon-btn"><img src={Man3} alt ="pfp 3" class ="image"></img></div>
+                        <div className="profile-icon-btn"><img src={Woman1} alt ="pfp 4" class ="image"></img></div>
+                        <div className="profile-icon-btn"><img src={Woman2} alt ="pfp 5" class ="image"></img></div>
+                        <div className="profile-icon-btn"><img src={Woman3} alt ="pfp 6"class ="image" ></img></div>
                     </div>
                 </div>
 
                 <button type="button" className="collapsible">Change Username</button>
                 <div className="contentSetting">
                     <form action="#">
-                        <label htmlFor="Name"><p className="content_paragraph"></p></label>
-                        <input type="type" id="Name" name="Name" className="text-line" />
+                        <div className="name-label-input">
+                            <label htmlFor="Name" className ="choose-username-label">Choose a new username: </label>
+                            <input type="type" id="Name" name="Name" className="text-line" />
+                        </div>
+                        <div className="submit">
+                            <button id="toggleButton">Verify</button>
+
+                        </div>
                     </form>
                 </div>
                 <button type="button" className="collapsible">
@@ -107,8 +91,7 @@ export default function Settings() {
                 </button>
 
                 <div className="contentSetting">
-                    <div className="container">
-  
+
                         <div className="range-slider">
                             <span id="rs-bullet" className="rs-label">0</span>
                             <input id="rs-range-line" className="rs-range" type="range" value="0" min="0" max="200"/>
@@ -117,9 +100,126 @@ export default function Settings() {
                         <div className="box-minmax">
                             <span>0</span><span>200</span>
                         </div>
-                        
-                    
-                    </div>
+                 </div>
+
+                <button type="button" className="collapsible">
+                    Update Libraries Visited
+                </button>
+                <div className="contentSetting">
+                    <label className="library-container">W.R. Castell Central Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Alexander Calhoun Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Bowness Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Fish Creek Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Glenmore Square Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Louise Riley Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Memorial Park Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Nose Hill Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Shawnessy Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Signal Hill Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">CrowfootLibrary
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Village Square Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Southwood Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Saddletowne Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Country Hills Library
+                        <input type="checkbox" checked="checked"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Judith Umbach Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                    <label className="library-container">Westhills Library
+                        <input type="checkbox"/>
+                        <span className="library-checkmark"></span>
+                    </label>
+                </div>
+
+                <button type="button" className="collapsible">
+                    Change Location
+                </button>
+                <div className="contentSetting">
+                    <table>
+                        <tr><td><h3 className="Location-head">Choose a city:</h3></td>
+                        <td><div className='selection'>
+                                <select id="cities" name ="cities">
+                                    <option value="None">--None--</option>
+                                    <option value="Airdrie">Airdrie</option>
+                                    <option value="Brooks">Brooks</option>
+                                    <option value="Calgary">Calgary</option>
+                                    <option value="Camrose">Camrose</option>
+                                    <option value="Cold Lake">Cold Lake</option>
+                                    <option value="Edmonton">Edmonton</option>
+                                    <option value="Fort Saskatchewan">Fort Saskatchewan</option>
+                                    <option value="Grande Prairie">Grande Prairie</option>
+                                    <option value="Leduc">Leduc</option>
+                                    <option value="Lethbridge">Lethbridge</option>
+                                    <option value="Lloydminster">Lloydminster</option>
+                                    <option value="Medicine Hat">Medicine Hat</option>
+                                    <option value="Red Deer">Red Deer</option>
+                                    <option value="Spruce Grove">Spruce Grove</option>
+                                    <option value="St. Albert">St. Albert</option>
+                                    <option value="Wetaskiwin">Wetaskiwin</option>
+                                </select>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr><td><h3 className="Location-head">Choose a town:</h3></td>
+                            <td><div className='selection'>
+                                <select id="towns" name ="towns">
+                                    <option value="None">--None--</option>
+                                    <option value="Banff">Banff</option>
+                                    <option value="Bow Island">Bow Island</option>
+                                    <option value="Chestermere">Chestermere</option>
+                                    <option value="Canmore">Canmore</option>
+                                    <option value="High Level">High Lebel</option>
+                                    <option value="Okotoks">Okotoks</option>
+                                </select>
+                            </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
