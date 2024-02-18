@@ -73,6 +73,8 @@
     transition: left 0.5s ease; /* Apply transition for smooth movement */
     display: flex; /* Make the container a flex container */
     align-items: center; /* Align items vertically */
+    margin: 80px;
+    width: 250px;
 }
 
 .logo {
@@ -80,6 +82,7 @@
     margin-right: 10px; /* Add margin to separate from slogan */
     border-radius: 50%;
     transition: transform 0.5s ease; /* Apply transition for smooth movement */
+    display: inline-block;
 }
 
 .logo-container.move-left {
@@ -100,17 +103,18 @@
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for opacity */
     white-space: nowrap;
+    display: inline-block; /* Change display to inline-block */
 }
 .slogan-container.show {
     opacity: 1; /* Show the slogan */
 }
 
 .logo-container.move-left .slogan-container {
-    display: block;
+    display: inline-block;
     opacity: 1;
-    transform: translate(-140%, -50%);
+    transform: translate(-10%, -50%);
     
-    animation: slideSlogan 0.5s forwards;
+    /*animation: slideSlogan 0.5s forwards;*/
 }
 
 @keyframes slideSlogan {
