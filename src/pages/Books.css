@@ -1,0 +1,134 @@
+/* color: #121212; */
+/* Books.css */
+body {
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    background-color: #FFFFFF;; /* Background color */
+    min-height: 100vh; /* Ensure container fills viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    background-color: #FFFFFF;; /* Header background color */
+    color: #121212; /* Header text color */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif; /* Header font */
+}
+
+.title {
+    margin: 10px;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.add-btn {
+    background-color: #FFFFFF; /* Button background color */
+    border: none;
+    width: 25px; 
+    height: 25px;
+    cursor: pointer;
+}
+
+
+.hamburger-btn {
+    background-color: #FFFFFF; /* Hamburger button color */
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.content {
+    width: 90%;
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+.section {
+    background-color: #FFFFFF; /* Section background color */
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow behind sections */
+    border-radius: 20px; /* Add border-radius for a rounded corner effect */
+    overflow: hidden; /* Ensure content does not overflow outside the section */
+}
+
+.section-header {
+    background-color: #FF5236; /* Section header background color */
+    color: #FFFFFF; /* Section header text color */
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif; /* Section header font */
+}
+
+.book-list {
+    display: flex;
+    margin-top: 10px;
+    
+}
+
+.book-list > img {
+    margin-right: 10px; /* Add margin to create space between images */
+    width: 90px ;
+    height: auto;
+}
+
+.book-list-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping */
+}
+
+
+.book {
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+.book > img {
+    margin-right: 10px; /* Add margin to create space between images */
+}
+
+.book-catalog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start
+    /* padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 20px; */
+}
+
+.book-catalog .book {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-catalog .book img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.book img {
+    width: auto;
+    height: 150px; /* Set the height of the images */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between books */
+}
+
