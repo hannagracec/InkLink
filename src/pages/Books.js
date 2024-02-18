@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 import './Books.css';
 import HamburgerIcon from './images/hamburger-icon.png';
 import AddIcon from './images/add-icon.png';
-import Book1 from './images/Books1.png'
+import PlaceHolder from './images/Placeholder.jpg'
 import Star from './images/star.jpg'
 import Lemon from './images/lemon.jpg'
 import Pink from './images/pink.jpg'
@@ -43,7 +43,7 @@ export default function Books() {
         // add a placeholder image URL
         const newBook = {
             id: catalog.length + 1,
-            imageUrl: "https://via.placeholder.com/150", // Placeholder image URL
+            imageUrl: "Placeholder", 
         };
 
         setCatalog([newBook, ...catalog]);
@@ -114,16 +114,16 @@ export default function Books() {
                     <div className="section-header">Catalog</div>
                     <div className="book-list-container">
                         <div className="book-list">
+                            {catalog.map((book) => (
+                                <div key={book.id} className="book" style={{ marginRight: '1px' }}>
+                                    <img src={PlaceHolder} alt="PlaceHolder" />
+                                </div>
+                            ))}
                             <img src={Hills} alt="Default Book" />
                             <img src={Mount} alt="Default Book" />
                             <img src={Shell2} alt="Default Book" />
                             <img src={Lemon} alt="Default Book" />
-                            <img src={Pink} alt="Default Book" />
-                            {catalog.map((book) => (
-                                <div key={book.id} className="book">
-                                    <img src="https://via.placeholder.com/150" alt="Default Book" />
-                                </div>
-                            ))}
+                            <img src={Pink} alt="Default Book"/>
                         </div>
                     </div>
                 </div>
