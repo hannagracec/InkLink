@@ -1,11 +1,8 @@
 import Man1 from "../pages/FriendsPP/Man1.png";
-import Man2 from "../pages/FriendsPP/Man2.png";
 import Man3 from "../pages/FriendsPP/Man3.png";
 import Woman1 from "../pages/FriendsPP/Woman1.png";
 import Woman2 from "../pages/FriendsPP/Woman2.png";
-import Woman3 from "../pages/FriendsPP/Woman3.png";
 import Woman4 from "../pages/FriendsPP/Woman4.png";
-import SearchIcon from "../pages/FriendsPP/SearchIcon.png"
 import React from 'react';
 import './FindFriends.css';
 export default FindFriends;
