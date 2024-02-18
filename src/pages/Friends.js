@@ -30,6 +30,10 @@ import Woman4 from "../pages/FriendsPP/Woman4.png";
 import React from 'react';
 import './Friends.css';
 import { Link } from 'react-router-dom';
+import homeIcon from '../pages/images/House.svg';
+import mapIcon from '../pages/images/map-black.svg';
+import friendIconRed from '../pages/images/group-red.svg'
+import bookIcon from '../pages/images/Book.svg'
 export default Friends;
 
 function Friends() {
@@ -197,7 +201,7 @@ function Friends() {
                 </div>
                 
 
-                <div className="person-card">
+                <div className="person-card-last">
                     {/* Individual person 12 */}
                     <div className="person">
                         <div className="profile-image">
@@ -210,8 +214,40 @@ function Friends() {
 </div>
 </div>
 </div>
+<Navbar/>
 </div>
 );
 }
+
+function Navbar() {
+    return (
+        <div className="navbar">
+            <div className="navbar-links">
+                <Link to="/Home">
+                    <div className='home-icon' >
+                        <img className="link-icon" src={homeIcon} alt="home icon"/>
+                    </div>
+                </Link>
+                <Link to="/books">
+                    <div className='books-icon' >
+                        <img className="link-icon" src={bookIcon} alt="book icon"/>
+                    </div>
+                </Link>
+                <Link to="/friends" className='friend-link'>
+                    <div className='friends-icon' >
+                        <img className="link-icon" src={friendIconRed} alt="friend icon"/>
+                    </div>
+                    <p className='friends-subtitle'>Friends</p>
+                </Link>
+                <Link to="/map">
+                    <div className='map-icon' >
+                        <img className="link-icon" src={mapIcon} alt="map icon"/>
+                    </div>
+                </Link>
+            </div>
+        </div>
+    );
+  }
+    
    
 

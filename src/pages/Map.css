@@ -29,3 +29,46 @@
     margin-bottom: 0;
     margin-left: 30px;
 }
+
+MapContainer {
+    height: 100vh;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px; 
+    color: #222222;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+.navbar {
+    background-color: white;
+    margin-bottom: 0;
+    height: 10vh;
+}
+
+.map-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #d64d38;
+    background-color: rgb(252, 99, 75, 0.5);
+    width: 120px;
+    justify-content: center;
+    border-radius: 30px;
+    font-weight: 500;
+    height: 40px;
+}
+
+.link-icon {
+    width: 30px;
+}
+
+.map-subtitle {
+    margin-left: 10px;
+}
+

@@ -6,7 +6,12 @@ import benchIcon from '../pages/images/benchpoint.svg';
 import parkIcon from '../pages/images/park.svg';
 import L from 'leaflet';
 import marker from '../pages/images/Point.svg';
-import './Map.css'
+import './Map.css';
+import homeIcon from '../pages/images/House.svg';
+import mapIconRed from '../pages/images/Map.svg';
+import { Link } from 'react-router-dom';
+import friendIcon from '../pages/images/Group.svg'
+import bookIcon from '../pages/images/Book.svg'
 
 function MapPage() {
     const centralLibraryLocation = [51.04546994292526, -114.05504115199753];
@@ -63,6 +68,7 @@ function MapPage() {
                     </Marker>
                 ))}
             </MapContainer>
+            <Navbar />
         </div>
     );
 }
@@ -90,6 +96,36 @@ function getMarkerIcon(type) {
         default:
             return null;
     }
+}
+
+function Navbar() {
+    return (
+        <div className="navbar">
+            <div className="navbar-links">
+                <Link to="/Home">
+                    <div className='home-icon' >
+                        <img className="link-icon" src={homeIcon} alt="home icon"/>
+                    </div>
+                </Link>
+                <Link to="/books">
+                    <div className='books-icon' >
+                        <img className="link-icon" src={bookIcon} alt="book icon"/>
+                    </div>
+                </Link>
+                <Link to="/friends">
+                    <div className='friends-icon' >
+                        <img className="link-icon" src={friendIcon} alt="friend icon"/>
+                    </div>
+                </Link>
+                <Link to="/map" className='map-link'>
+                    <div className='map-icon' >
+                        <img className="link-icon" src={mapIconRed} alt="map icon"/>
+                    </div>
+                    <p className='map-subtitle'>Map</p>
+                </Link>
+            </div>
+        </div>
+    );
 }
 
 export default MapPage;

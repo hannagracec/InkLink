@@ -10,6 +10,11 @@ import './Books.css';
 import HamburgerIcon from './images/hamburger-icon.png';
 import AddIcon from './images/add-icon.png';
 import Book1 from './images/Books1.png'
+import homeIcon from '../pages/images/House.svg';
+import mapIcon from '../pages/images/map-black.svg';
+import { Link } from 'react-router-dom';
+import friendIcon from '../pages/images/Group.svg'
+import bookIconRed from '../pages/images/book-red.svg'
 
 
 export default function Books() {
@@ -104,6 +109,38 @@ export default function Books() {
                     </div>
                 </div>
             </div>
+            <Navbar/>
         </div>
     )
 }
+
+function Navbar() {
+    return (
+        <div className="navbar">
+            <div className="navbar-links">
+                <Link to="/Home">
+                    <div className='home-icon' >
+                        <img className="link-icon" src={homeIcon} alt="home icon"/>
+                    </div>
+                </Link>
+                <Link to="/books" className='book-link'>
+                    <div className='books-icon' >
+                        <img className="link-icon" src={bookIconRed} alt="book icon"/>
+                    </div>
+                    <p className='books-subtitle'>Books</p>
+                </Link>
+                <Link to="/friends">
+                    <div className='friends-icon' >
+                        <img className="link-icon" src={friendIcon} alt="friend icon"/>
+                    </div>
+                </Link>
+                <Link to="/map">
+                    <div className='map-icon' >
+                        <img className="link-icon" src={mapIcon} alt="map icon"/>
+                    </div>
+                </Link>
+            </div>
+        </div>
+    );
+  }
+    

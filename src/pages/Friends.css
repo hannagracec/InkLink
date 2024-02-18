@@ -85,6 +85,10 @@
     color: #252424; /* Change the color of the names */
 }
 
+.person-card-last {
+    margin-bottom: 100px;
+}
+
 .person:hover {
     transform: translateY(-3px); /* Move the person div 3px up on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Further increase the shadow size on hover */
@@ -100,8 +104,50 @@ body {
 
 .person-info h2 {
     font-family: "Roboto", sans-serif; /* Apply Roboto Condensed font to person names */
+    font-weight: 500;
+}
+
+.person-info {
+    text-decoration: none;
 }
 
 .find-friend-btn {
     font-family: "Roboto", sans-serif; /* Apply Roboto Condensed font to the button */
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px; 
+    color: #222222;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.navbar {
+    background-color: white;
+    margin-bottom: 0;
+    height: 10vh;
+}
+
+.friend-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #d64d38;
+    background-color: rgb(252, 99, 75, 0.5);
+    width: 120px;
+    justify-content: center;
+    border-radius: 30px;
+    font-weight: 500;
+    height: 40px;
+}
+
+.link-icon {
+    width: 30px;
+}
+
+.friends-subtitle {
+    margin-left: 10px;
 }
