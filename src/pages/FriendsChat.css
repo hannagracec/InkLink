@@ -1,0 +1,38 @@
+/* Style for the chat container */
+.chat-container {
+    margin-top: 20px; /* Adjust spacing as needed */
+    overflow: hidden; /* Clear floats */
+}
+
+/* Style for the message container */
+.message {
+    max-width: 70%; /* Limit the width of the speech bubble */
+    margin-bottom: 10px; /* Add spacing between messages */
+    padding: 10px; /* Add padding to create space around content */
+    border-radius: 10px; /* Make the speech bubble rounded */
+    clear: both; /* Clear floats to ensure correct positioning */
+}
+
+/* Style for outgoing messages from one person */
+.outgoing-sender1 {
+    float: right; /* Float the message container to the right */
+    background-color: #DCF8C6; /* Set background color for outgoing messages from sender 1 */
+}
+
+/* Style for outgoing messages from the other person */
+.outgoing-sender2 {
+    float: left; /* Float the message container to the left */
+    background-color: #EAEAEA; /* Set background color for outgoing messages from sender 2 */
+}
+
+/* Style for incoming messages (from the receiver) */
+.incoming {
+    clear: both; /* Clear floats to ensure correct positioning */
+    background-color: #FFFFFF; /* Set background color for incoming messages */
+}
+
+/* Style for the message content */
+.message-content {
+    color: #333; /* Set text color for messages */
+}
+
