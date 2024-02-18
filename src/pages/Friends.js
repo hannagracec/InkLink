@@ -45,7 +45,7 @@ function Friends() {
             <div className="people-list">
                 <div className="person-card">
                     {/* Individual person 1 */}
-                    <div className="person">
+                    <Link to="/chat" className="person">
                         <div className="profile-image">
                             <img className='profile' src={Woman1} alt="Profile Pic" />
                         </div>
@@ -53,7 +53,7 @@ function Friends() {
                             <h2>Tania Monge</h2>
                             {/* Add more information about the person here */}
                         </div>
-                    </div>
+                    </Link>
                 </div>
                 
 

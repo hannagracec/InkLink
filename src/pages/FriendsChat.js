@@ -1,8 +1,7 @@
-import profile from "../pages/images/profile.jpeg";
 import Woman2 from "../pages/FriendsPP/Woman2.png";
 import React from 'react';
 import './FriendsChat.css';
-export default FriendsChat.css;
+export default FriendsChat;
 
 
 function FriendsChat() {

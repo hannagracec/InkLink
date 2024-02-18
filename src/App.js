@@ -5,8 +5,9 @@ import FirstPage from './pages/FirstPage'
 import MapPage from './pages/Map';
 import FriendsPage from './pages/Friends';
 import BooksPage from './pages/Books';
-import Login from './pages/Login'
-import FindFriends from './pages/FindFriends'
+import Login from './pages/Login';
+import FindFriends from './pages/FindFriends';
+import Message from './pages/FriendsChat';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/friends" element={<FriendsPage />} />
           <Route path="/books" element={<BooksPage />} />
           <Route path="/findFriends" element={<FindFriends/>} />
+          <Route path="/chat" element={<Message/>} />  
         </Routes>
       </Router>
     </div>
