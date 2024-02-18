@@ -95,13 +95,13 @@
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font to all text */
+    font-family: "Roboto", sans-serif; /* Apply Roboto Condensed font to all text */
 }
 
 .person-info h2 {
-    font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font to person names */
+    font-family: "Roboto", sans-serif; /* Apply Roboto Condensed font to person names */
 }
 
 .find-friend-btn {
-    font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font to the button */
+    font-family: "Roboto", sans-serif; /* Apply Roboto Condensed font to the button */
 }
