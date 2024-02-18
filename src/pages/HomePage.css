@@ -25,11 +25,14 @@
     margin-bottom: 30px;
     animation: slideInVertical 1.5s ease forwards; 
     opacity: 0;
-    font-family: "Roboto Mono", monospace;
 }
 
 .user {
     font-weight: bold;
+}
+
+.user-name {
+    font-family: "Roboto Mono", monospace;
 }
 
 .hello {
@@ -182,7 +185,7 @@
     width: 350px;
     border-radius: 15px;
     box-shadow: 5px 10px 15px #d4cccc;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
     padding: 10px;
 }
 

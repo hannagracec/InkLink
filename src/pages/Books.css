@@ -1,7 +1,8 @@
 /* color: #121212; */
 /* Books.css */
+
 body {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 .container {
@@ -12,7 +13,7 @@ body {
     align-items: center;
 }
 
-.header {
+.header-books {
     background-color: #FFFFFF;; /* Header background color */
     color: #121212; /* Header text color */
     width: 100%;
@@ -50,7 +51,7 @@ body {
     margin-right: 20px;
 }
 
-.content {
+.content-books {
     width: 90%;
     max-width: 400px;
     margin-top: 10px;

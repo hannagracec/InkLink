@@ -28,7 +28,7 @@ export default function Books() {
 
     return (
         <div className="container">
-            <header className="header">
+            <header className="header-books">
                 <div className="title">Books</div>
                 <div className="header-buttons">
                     {/* Use the imported image for the add button */}
@@ -37,7 +37,7 @@ export default function Books() {
                     <img className="hamburger-btn" src={HamburgerIcon} alt="Hamburger Icon" />
                 </div>
             </header>
-            <div className="content">
+            <div className="content-books">
                 {/* Add more space between sections */}
                 <div style={{ marginBottom: '20px' }}></div>
 
