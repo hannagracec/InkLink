@@ -1,0 +1,106 @@
+/* friends.css */
+.header {
+    background-color: #F8F8F8;
+    color: #444242;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    
+}
+
+.title {
+    margin: 0; /* Remove default margin */
+    color: #252424;
+    font-size: 40px;
+}
+
+.find-friend-btn {
+    background-color: #FF5236; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Add transition for smooth effect */
+    letter-spacing: 1px; /* Increase letter spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+    margin:40px;
+}
+
+.find-friend-btn:hover {
+    transform: translateY(-3px); /* Move the button 3px up on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow on hover */
+}
+
+.find-friend-btn:active {
+    filter: brightness(90%); /* Darken the button slightly when pressed */
+}
+
+
+.people-list {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    background-color: #F8F8F8;
+
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden; /* Ensure content doesn't overflow the circular shape */
+    padding:15px;
+}
+
+.profile-image img {
+    width: 100%; /* Ensure the image fills the circular container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the entire image is visible within the circular container */
+    border-radius: 50%; /* Make sure the image itself is also circular */
+}
+
+.divider {
+    border: 1px solid #C4C4C4;
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+.person {
+    border-radius: 10px; /* Add border-radius for curved corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase the shadow size */
+    margin-bottom: 10px; /* Reduce margin between each person */
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Add transition for smooth effect */
+}
+.person-info h2 {
+    color: #252424; /* Change the color of the names */
+}
+
+.person:hover {
+    transform: translateY(-3px); /* Move the person div 3px up on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Further increase the shadow size on hover */
+}
+
+.person:active {
+    filter: brightness(90%); /* Darken the person div slightly when pressed */
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font to all text */
+}
+
+.person-info h2 {
+    font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font to person names */
+}
+
+.find-friend-btn {
+    font-family: 'Roboto Condensed', sans-serif; /* Apply Roboto Condensed font to the button */
+}
