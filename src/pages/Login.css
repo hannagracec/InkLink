@@ -7,21 +7,42 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #EDEEF0;
-    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url('./images/background.png');
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
     max-width: 400px;
     padding: 20px;
-    border-radius: 12px;
+    color: #222222;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-content {
+    background-color: rgb(235, 235, 235, 0.8);
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    height: 600px;
+}
+
+.form-section {
+    width: 300px;
+    display: flex;
 }
 
 /* Form styles */
 .login-form {
-    width: 100%;
+    width: 200px;
     padding: 20px;
-    border-radius: 8px;
-    background-color: #F8F8F8;
-    border: 4px solid #FFBD44; /* Orange border color */
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    box-shadow: 5px 10px 15px #afafaf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
 }
 
 /* Input styles */
@@ -30,25 +51,29 @@
     padding: 12px;
     margin-top: 12px;
     margin-bottom: 12px;
-    border: 1px solid #FFBD44; /* Orange border color */
+    border: none;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
     /* Add drop shadow to inputs */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.226);
 }
 
 /* Button styles */
 .login-button {
-    width: 92%;
+    width: 100px;
     padding: 12px;
     background-color: #FF5236; /* Red button color */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 30px;
     cursor: pointer;
     font-family: 'Roboto Condensed', sans-serif;
     transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
 }
 
 .login-button:hover {
@@ -114,11 +139,13 @@
 
 /* Apply animation to after pseudo-element */
 .login-header::after {
-    content: '\2713'; /* Unicode character for checkmark */
-    color: #222222; /* Green color */
-    font-size: 32px;
+    content: ''; /* Remove the Unicode character */
+    background-image: url('./images/Checkmark.svg'); /* Use your custom checkmark icon */
+    background-size: cover;
+    width: 32px; /* Adjust width and height as needed */
+    height: 32px; /* Adjust width and height as needed */
     margin-left: 5px;
-    animation: checkmark 0.5s ease forwards; /* Apply animation */
+    animation: checkmark 0.8s ease forwards; /* Apply animation */
 }
 
 .link {

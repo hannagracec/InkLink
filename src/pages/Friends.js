@@ -38,10 +38,10 @@ export default Friends;
 
 function Friends() {
     return (
-        <div>
+        <div className="friends-page">
             {/* Header */}
             <div className="header-friends">
-                <h1 className="title">Your Friends!</h1>
+                <h1 className="title-friends">My Friends</h1>
                 <Link to="/findFriends" className="find-friend-btn">Find Friends</Link>
             </div>
 

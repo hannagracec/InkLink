@@ -52,7 +52,7 @@ export default function Books() {
     return (
         <div className="container">
             <header className="header-books">
-                <div className="title">Books</div>
+                <div className="title-books">My Books</div>
                 <div className="header-buttons">
                     {/* Use the imported image for the add button */}
                     <img className="add-btn" src={AddIcon} alt="Add Button" onClick={addBookToCatalog} />

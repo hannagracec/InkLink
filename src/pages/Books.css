@@ -3,6 +3,8 @@
 html, body {
     margin: 0; /* Remove default margin */
     overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    background-color: #ebebeb;
 }
 
 body {
@@ -10,7 +12,7 @@ body {
 }
 
 .container {
-    background-color: #F5F5F5;; /* Background color */
+    background-color: #F5F5F5; /* Background color */
     min-height: 100vh; /* Ensure container fills viewport height */
     display: flex;
     flex-direction: column;
@@ -18,19 +20,19 @@ body {
 }
 
 .header-books {
-    background-color: #FFFFFF;; /* Header background color */
+    background-color: #F5F5F5; /* Header background color */
     color: #121212; /* Header text color */
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 40px;
     font-weight: bold;
-    font-family: 'Roboto Condensed', sans-serif; /* Header font */
+    font-family: 'Roboto', sans-serif; /* Header font */
 }
 
-.title {
-    margin: 10px;
+.title-books {
+    margin: 20px 25px;
+    font-size: 35px;
 }
 
 .header-buttons {
@@ -41,43 +43,46 @@ body {
 .add-btn {
     background-color: #F5F5F5; /* Button background color */
     border: none;
-    width: 25px; 
-    height: 25px;
+    width: 22px; 
+    height: 22px;
     cursor: pointer;
 }
 
 
 .hamburger-btn {
     background-color: #F5F5F5; /* Hamburger button color */
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     margin-left: 10px;
     margin-right: 20px;
 }
 
 .content-books {
-    width: 90%;
+    width: 85%;
     max-width: 400px;
     margin-top: 10px;
     margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .section {
     background-color: #FFFFFF; /* Section background color */
-    border-radius: 20px;
+    border-radius: 30px;
     margin-bottom: 20px;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Add shadow behind sections */
+    box-shadow: 5px 10px 15px #b3afaf; /* Add shadow behind sections */
     border-radius: 20px; /* Add border-radius for a rounded corner effect */
     overflow: hidden; /* Ensure content does not overflow outside the section */
 }
 
 .section-header {
-    background-color: #FF5236; /* Section header background color */
+    background-color: #f86c57;
     color: #FFFFFF; /* Section header text color */
     padding: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     font-weight: bold;
     font-family: 'Roboto Condensed', sans-serif; /* Section header font */
 }

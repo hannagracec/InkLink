@@ -11,7 +11,7 @@ function FriendsChat() {
         <div className="chat-container">
            <div className="person-card">
     {/* Individual person 1 */}
-    <div className="person">
+    <div className="person-chat">
         <div className="profile-image">
             <img className='profile' src={Woman1} alt="Profile Pic"></img>
         </div>

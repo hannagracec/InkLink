@@ -1,33 +1,39 @@
 /* friends.css */
 .header-friends {
-    background-color: #F8F8F8;
+    background-color: #ebebeb;
     color: #444242;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 30px;
-    
+    flex-direction: column;
 }
 
-.title {
-    margin: 0; /* Remove default margin */
+.title-friends {
+    margin-bottom: 10px; /* Remove default margin */
+    margin-top: 0;
     color: #252424;
-    font-size: 40px;
+    font-size: 35px;
+}
+
+.friends-page {
+    background-color: #a3a1a1;
 }
 
 .find-friend-btn {
     background-color: #FF5236; /* Button color */
     color: white; /* Button text color */
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Add transition for smooth effect */
     letter-spacing: 1px; /* Increase letter spacing */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
-    margin:40px;
     text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .find-friend-btn:hover {
@@ -43,8 +49,8 @@
 .people-list {
     display: flex;
     flex-direction: column; /* Change to column layout */
-    background-color: #F8F8F8;
-
+    background-color: #ebebeb;
+    align-items: center;
 }
 
 .person {
@@ -76,7 +82,9 @@
 
 
 .person {
-    border-radius: 10px; /* Add border-radius for curved corners */
+    background-color: white;
+    width: 350px;
+    border-radius: 20px; /* Add border-radius for curved corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase the shadow size */
     margin-bottom: 10px; /* Reduce margin between each person */
     transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Add transition for smooth effect */
