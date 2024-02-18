@@ -46,6 +46,7 @@
     cursor: pointer;
     font-family: 'Roboto Condensed', sans-serif;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .sign-in-button:hover {

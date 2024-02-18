@@ -1,5 +1,6 @@
 import React from 'react';
 import './FirstPage.css';
+import { Link } from 'react-router-dom';
 
 export default function FirstPage() {
     return (
@@ -7,7 +8,7 @@ export default function FirstPage() {
             <div className="background-shapes"></div>
             <div className="content">
                 <h1 className="slide-in">Welcome to App</h1>
-                <button className="sign-in-button">Sign In</button>
+                <Link to="/Login" className="sign-in-button">Sign In</Link>
             </div>
         </div>
     );

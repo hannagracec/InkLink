@@ -1,6 +1,7 @@
 import React from 'react';
 import './Login.css'; // Import CSS file for styling
 import logo from './images/logo.png'; 
+import { Link } from 'react-router-dom';
 
 export default function Login() {
     // Function to handle form submission
@@ -48,9 +49,9 @@ export default function Login() {
                         className="login-input"
                     />
                 </div>
-                <div>
-                    <button type="submit" className="login-button">Login</button>
-                </div>
+                <Link className="link" to="/Home">
+                    <div className="login-button">Login</div>
+                </Link>
             </form>
             <div className="sign-up-link">
                 <p>Don't have an account? <a href="/signup">Sign up</a></p>
